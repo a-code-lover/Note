@@ -1,0 +1,77 @@
+**************************************************************************************************
+    *                                                                                   *
+    *                                                                                   *
+    *                                                                                   *
+    *                                                                                   *   
+    *                    https://scipy.org/                                             *   
+    *                                                                                   *   
+    *             精妙的算法，清晰的思路，整齐的风格                                    *   
+    *                                                                                   *   
+    *                                                                                   *   
+    *                                                                                   *   
+    *                                                                                   *   
+    *                                                                                   *   
+**************************************************************************************************
+快速入门：http://codingpy.com/article/an-introduction-to-numpy/
+
+#numpy  2017秋冬
+Numpy purpose:
+basic:
+    ndim, shape,  size, dtype, itemsize, axis
+    array() , arange() , linspace(), zeros(), ones(), empty(), empty_like() , reshape , resize() , repeat() ,  ravel , vstack() , hstack() , vsplit , 
+    +, -, * , ** , dot() , cross() ,indice(), 
+    sum , cumsum, max , min , sort , argmax , argmin , argsort , exp, sqrt , add , putmask , real , imag , put
+slice: : , ... , take() , 
+random:rand(),randn(),randint()--low,high,size,sample,choic,(shuffle,permutation),
+    
+-----------------------------------------------------------------------------------------------------    
+2017 秋冬
+#Python basic internal function:
+int , bin , hex, oct , chr , unichr , ord ,bool , float , long , complex , 
+set , list, dict, tuple, frozenset , str , file , 
+sorted, reversed, zip, enumerate, all ,any, filter , format, range, reptr, xrange , slice
+sum , reduce, cmp, eval , map , pow , round , abs, min, max, hash , id , divmod, 
+globals, vars, locals, dir, 
+super , staticmethod , classmethod , hasattr , setattr , getattr , delattr , isinstance , issubclass
+len , type , input raw_input, 
+
+##SciPy Stack
+##  numpy------>SciPy------->Scikit-Learn(机器学习)
+##  Keras------>Tensorflow------>Thean
+
+----------------------------------------------------------------------------------------------------
+2018春
+ndarray.flatten():Return a copy of the array collapsed into one dimension.
+numpy.ravel(array, order='C'):Return a contiguous flattened array.
+numpy.concatenate((a1, a2, ...), axis=0, out=None):Join a sequence of arrays along an existing axis.
+
+
+---------------------------------------------------------------------------------------------------
+#https://matplotlib.org/tutorials/index.html
+#matplotlib.pyplot
+plot(),xlabel,ylabel,title,suptitle,grid(true),show,scatter(s,c,marker),subplot(131),bar(),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

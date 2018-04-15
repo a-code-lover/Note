@@ -1,0 +1,3 @@
+﻿快速入门：http://codingpy.com/article/a-quick-intro-to-matplotlib/
+
+1.要执行.show()才会显示图像

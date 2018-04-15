@@ -1,0 +1,2 @@
+1.NULL:macro definition of a null pointer, in c++11 standard, we use nullptr.
+  #define NULL 0 or #define NULL (void*)0 , in fact the 0 has different meanings depending on the context in which its used.
