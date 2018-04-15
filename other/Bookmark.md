@@ -1,0 +1,1 @@
++ http://wowubuntu.com/markdown/#philosophy (markdown syntax)

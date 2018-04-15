@@ -1,0 +1,47 @@
+课程数据：https://github.com/caiiiac/Machine-Learning-with-Python/tree/master/%E8%AF%BE%E7%A8%8B%E6%95%B0%E6%8D%AE
+
+聚类，通过距离计算相似度：欧式距离，曼哈顿距离，马氏距离，夹角余弦      
+    SKlearn聚类：Kmeans，DBSCAN，高斯混合， Birch
+	SKlearn降维：PCA，fastICA，NMF，LDA
+
+----------------------------------------------------------------------------------------------------
+
+sklearn.cluster.DBSCAN:   基于密度的空间cluster for application with noise  
+	DBSCAN(参数：半径，判断的点数，距离计算的方法）   三类点：核心点，边界点，噪音点   
+	DBSCAN(eps=0.5，min_samples=5, matric='')         返回的对象含有标签
+  
+  
+	sklearn.cluster.Kmeans:  n个对象分为k个簇，思想：按照到中心点的距离分，重新确定中心点，中心点收缩
+  
+  
+----------------------------------------------------------------------------------------------------
+
+sklearn.decomposition.NMF  (图像，音频，文本)
+	NMF：非负矩阵分解   V=W*H（近似）       原图像=抽取特征*系数矩阵
+	NMF(n_components = nrow*ncol，指定分解矩阵初始化方式init=)
+	
+sklearn.decomposition.PCA  (主成分分析，最常用)
+	思想：将高维变量分解为线性无关的低为向量
+	PCA(n_components主成分维度，svd_solver特征值分解方法）
+	
+----------------------------------------------------------------------------------------------------
+
+分类：数据带标签，离散，训练集/测试集，
+	准确率=（FN+TP）/ALL
+	精确率= TP / TP+FP
+	召回率= TP / TP+TN
+	分类函数：knn，naivebayes，svm，decision tree，neural networks
+	
+	
+----------------------------------------------------------------------------------------------------
+
+回归：对带有时序信息的数据进行预测或者趋势拟合
+	sklearn.linear_mode(线性）：LinearRegression，Ridge，Lasso
+	
+	sklearn.preprocessing(非线性)
+
+  
+	
+	
+	
+	

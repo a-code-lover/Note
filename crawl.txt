@@ -1,0 +1,37 @@
+#文本识别
+import pytesseract
+from PIL import Image
+print (pytesseract.image_to_string(Image.open \
+    ("f://img/test1.png")))
+
+	
+#幂等性
+http的幂等性是指一次和多次请求一个资源应该有同样的副本。属于语义范畴，不能通过语法定义。
+http://www.cnblogs.com/weidagang2046/archive/2011/06/04/2063696.html
+
+#JSON利用纯文本传输简单结构的资料，常应用于web，在许多方面可以替代XML
+https://blog.wu-boy.com/2011/04/
+
+#负载均衡应对高并发  http重定向
+
+#AJAX异步java和xml，可以实现在不重新加载网页的情况下实现局部更新。
+ AJAX应用可以仅仅向服务器发型和取向必要的数据，由js本地处理，使得客户端的服务器端交互的数据量极大减少（5%）。
+ 
+#http头部   http://www.studyofnet.com/news/166.html
+
+#Web应用无状态性：每次请求都是独立的，结果与之前的请求和之后的请求都没有直接的关系。
+web应用（有状态）=http（无状态）+cookie（客户端）/session（服务器端）状态机制+其他辅助机制。   tcp（有状态）/udp（无状态）/ip（无）
+
+#meta http-equiv 属性：http://kinglyhum.iteye.com/blog/827807
+
+#Beautiful Soup库是解析、遍历、维护“标签树”的功能库 (约定引用方式：import and from import)  支持utf-8
+ html.parser, prettify, contents/children/descendants,  next_sibling(s), previous_sibling(s), 
+ 
+#XML JSON YAML
+
+#Re
+
+#Scrapy    
+
+#CSS Selector
+
