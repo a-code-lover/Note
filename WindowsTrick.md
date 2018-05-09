@@ -6,3 +6,10 @@
 3.命名：
 
 4.VisualStudio的菜单栏在工具->自定义中修改。
+>配置vsvimrc后重启vs才生效
+>vs ctrl + tab切换标签页
+>vs 多列选择，shift+alt+arrow  ctrl+v in vim
+>vs 注释，ctrl+k+c/u
+>vs 代码自动对齐，ctrl+k+f
+>windows:_sleep(5000)暂停5s_
+>vs 报错无法打开exe可能是之前的控制窗口没有关闭
