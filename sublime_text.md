@@ -1,5 +1,5 @@
 参考配置:
-    http://blog.csdn.net/hfut_jf/article/details/52853868（markdownediting）
+    http://blog.csdn.net/hfut_jf/article/details/5285386 （markdownediting）
     http://jokerliang.com/markdown-editing-and-preview-in-sublime-text-3.html （markdown实时预览）
     https://feliving.github.io/Sublime-Text-3-Documentation/ (vintage模式)
     https://segmentfault.com/a/1190000002570753 (快捷键)
@@ -7,10 +7,13 @@
     http://blog.csdn.net/dream_allday/article/details/78338736 (anaconda插件载入配置提示错误)
     http://blog.csdn.net/u011475210/article/details/78168341 （类IDE配置）
     http://www.riaway.com/theme.php(配色方案参考)
+    https://www.jianshu.com/p/5f3a29632645 (Package Resource Viewer to change color scheme)
     https://jdhao.github.io/2017/03/04/Sublime-Windows-Markdown/ (markdown简单技巧)
     https://blog.csdn.net/coslay/article/details/42324505 (sublime代码补全插件)
     https://blog.csdn.net/qq_24345801/article/details/79077902 (解决输入法不同步问题)
     http://www.yalewoo.com/sublime_text_3_gcc.html  (配置c++环境)
+    https://my.oschina.net/u/3485339/blog/900297  (c++) 
+    http://www.linuxdiyf.com/linux/21941.html (c++compile)
     https://blog.qiujinfeng.com/archives/making-Sublime-Text-cplusplus-IDE.html  (配置c++环境)
     https://www.zhihu.com/question/39064280  （重装同步，覆盖roaming/sublimetext3文件夹）
     https://9iphp.com/web/html/sublime-text-code-snippets.html (定制snippet代码段)
@@ -45,6 +48,12 @@ SublimeAStyleFormatter:
 + 鼠标选中文本，按下 Alt F3 (Win) 或 Ctrl Command G(Mac) 即可一次性选择全部的相同文本进行同时编辑； 
 + Shift 鼠标右键 (Win) 或 Option 鼠标左键 (Mac) 或使用鼠标中键可以用鼠标进行竖向多行选择； 
 + Ctrl 鼠标左键(Win) 或 Command 鼠标左键(Mac) 可以手动选择同时要编辑。
+
+6.Windows下
+备份文件夹：C:\Users\yourusername\AppData\Roaming\Sublime Text 3\Packages\User
+
+Linux下
+备份文件夹：~/Library/Application/Support/Sublime\ Text\ 3/Packages/User
 
 
 
