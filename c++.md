@@ -129,3 +129,32 @@ baz = MyClass();         // move assignment
 
 ##12.inline functions
 >Calling a function generally causes a certain overhead (stacking arguments, jumps, etc...), and thus for very short functions, it may be more efficient to simply insert the code of the function where it is called, instead of performing the process of formally calling a function.
+
+##13.inheritance
+>Unless otherwise specified, the constructors of a derived class calls the default constructor of its base classes (i.e., the constructor taking no arguments). Calling a different constructor of a base class is possible, using the same syntax used to initialize member variables in the initialization list.
+
+|             | public    | protected | private |
+| ----------- | :-------: | :-------: | ------- |
+| public inh  | public    | protected | no |
+| protect inh | protected | protected | no |
+| private inh | private   | private   | no |
+
+##[14.polymorphism](http://www.cplusplus.com/doc/tutorial/polymorphism/)
+>**One of the key features of class inheritance is that a pointer to a derived class is type-compatible with a pointer to its base class. Polymorphism is the art of taking advantage of this simple but powerful and versatile feature.**
+
+>**A virtual member is a member function that can be redefined in a derived class, while preserving its calling properties through references.**
+
+>**A class that declares or inherits a virtual function is called a polymorphic class. Classes that contain at least one pure virtual function are known as abstract base classes. Virtual members and abstract classes grant C++ polymorphic characteristics, most useful for object-oriented projects.**
+
+>**An abstract base class is not totally useless. It can be used to create pointers to it, and take advantage of all its polymorphic abilities. And can actually be dereferenced when pointing to objects of derived (non-abstract) classes.**
+
+##[15.type casting](http://www.cplusplus.com/doc/tutorial/typecasting/)    
+**no_safe**
+```c++
+double x = 10.3;
+int y;
+y = int (x);    // functional notation
+y = (int) x;    // c-like cast notation
+```
+
+##16.Exceptions
