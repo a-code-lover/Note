@@ -13,3 +13,9 @@
 >vs 代码自动对齐，ctrl+k+f
 >windows:_sleep(5000)暂停5s_
 >vs 报错无法打开exe可能是之前的控制窗口没有关闭
+>ctrl + alt + A：命令窗口
+
+5.了解Windows编程：https://blog.csdn.net/bigpudding24/article/details/48812399
+**MSDN**
+
+6.alt + d == F6
