@@ -11,3 +11,6 @@
 + mind the leagacy and UEFI booting. 
 + mind the way of writing USB
 + use EasyBCD to add a grub or grub leagacy.
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+timedatectl set-local-rtc 1 (reset)
