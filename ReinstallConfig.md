@@ -6,3 +6,8 @@
 
 3.MinGW: http://www.mingw.org/
   MInGW-w64: https://sourceforge.net/projects/mingw-w64/files/mingw-w64/
+
+4.Laomaotao install Windows10 and UltraISO intall Linux 18.04.
++ mind the leagacy and UEFI booting. 
++ mind the way of writing USB
++ use EasyBCD to add a grub or grub leagacy.

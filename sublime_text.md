@@ -31,23 +31,28 @@ SublimeAStyleFormatter:
 
 技巧：
 
->1.侧边栏：c-k-b，通过project->add folder to project添加文件夹，通过sidebarenhancement插件增强侧边栏的右键功能
+1.侧边栏：c-k-b，通过project->add folder to project添加文件夹，通过sidebarenhancement插件增强侧边栏的右键功能。
 
->2.侧边栏的字体大小是在主题中修改的，功能扩展是在sidebar插件中实现的。
+2.侧边栏的字体大小是在主题中修改的，功能扩展是在sidebar插件中实现的。 
 
->3.要在sublime 实现c或c++代码的编译和运行，在本质上说也是调用外部的命令，windows中也可以理解为执行一段cmd命令。
+3.要在sublime 实现c或c++代码的编译和运行，在本质上说也是调用外部的命令，windows中也可以理解为执行一段cmd命令。 
 目前c/c++编译器最流行的就是gcc和g++,MinGW是Minimalist GNU on >Windows的首字母缩写，安装后就可以使用很多的GNU工具。GNU（GNU’s Not >Unix）是linux中的一个著名的项目，包含了gcc\g++\gdb等工具。也就是说，安装MinGw后，我们就可以使用gcc和g++命令了。
 
->4.ctrl+`:show console
-  >ctrl+shift+/：注释
-  >ctrl+m: jump out of brackets，normal
-  
->5.多行编辑：
-+ 鼠标选中多行，按下 Ctrl Shift L (Command Shift L) 即可同时编辑这些行； 
-+ 鼠标选中文本，反复按 CTRL D (Command D) 即可继续向下同时选中下一个相同的文本进行同时编辑； 
-+ 鼠标选中文本，按下 Alt F3 (Win) 或 Ctrl Command G(Mac) 即可一次性选择全部的相同文本进行同时编辑； 
-+ Shift 鼠标右键 (Win) 或 Option 鼠标左键 (Mac) 或使用鼠标中键可以用鼠标进行竖向多行选择； 
-+ Ctrl 鼠标左键(Win) 或 Command 鼠标左键(Mac) 可以手动选择同时要编辑。
+4.markdown中空格和空行对格式有很大影响。 
+
+4.
+ + ctrl+`:show console  
+ + ctrl+shift+/：注释  
+ + ctrl+m: jump out of brackets，normal  
+ + shift+tab: markdown folding  
+ + ctrl+pagedown: switch tag    
+
+5.多行编辑：
++ 鼠标选中多行，按下 Ctrl Shift L (Command Shift L) 即可同时编辑这些行；   
++ 鼠标选中文本，反复按 CTRL D (Command D) 即可继续向下同时选中下一个相同的文本进行同时编辑；   
++ 鼠标选中文本，按下 Alt F3 (Win) 或 Ctrl Command G(Mac) 即可一次性选择全部的相同文本进行同时编辑；    
++ Shift 鼠标右键 (Win) 或 Option 鼠标左键 (Mac) 或使用鼠标中键可以用鼠标进行竖向多行选择；    
++ Ctrl 鼠标左键(Win) 或 Command 鼠标左键(Mac) 可以手动选择同时要编辑。   
 
 6.Windows下
 备份文件夹：C:\Users\yourusername\AppData\Roaming\Sublime Text 3\Packages\User
