@@ -12,3 +12,10 @@
  - mind the way of writing USB   
  - use EasyBCD to add a grub or grub leagacy.    
  - time synchronization of Linux and Windows double sysytem.
+```bash
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+timedatectl set-local-rtc 0 (reset)
+```
+
+
