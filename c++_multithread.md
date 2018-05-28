@@ -111,3 +111,7 @@ friend void swap(X& lhs, X& rhs)
     swap(lhs.some_detail,rhs.some_detail);
   }
 ```
+
+##3.winsock
+###socket error
+Error#10054: 个连接被对方重设。一个建立的连接被远程主机强行关闭，若远程主机上的进程异常终止运行（由于内存冲突或硬件故障），或者针对套接字执行了一次强行关闭，便会产生10054错误。针对强行关闭的情况，可用SO_LINGER套接字选项和setsockopt来配置一个套接字。
