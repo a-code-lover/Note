@@ -1,4 +1,8 @@
-1.%appdata%:直接访问路径
+1.路径
++ %appdata%:直接访问路径。 
++ Windows使用\分隔目录是因为/被dos作为参数符号了。
++ Windows的~目录由环境变量HOME制定。
+
 
 2.打开的进程使用了dll文件导致文件无法删除：http://tech.sina.com.cn/s/s/2008-11-27/16192609051.shtml
  tasklist命令

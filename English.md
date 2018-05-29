@@ -11,6 +11,7 @@
 + instantiate
 + interval: 区间
 + lexicographically: 字典顺序
++ local and global 局部和全局
 + mutex: mutual exclusion 互斥锁
 + nested : 
 + normal distribution and skewed distribution 正态分布和偏态分布
