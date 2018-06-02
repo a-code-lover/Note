@@ -13,3 +13,5 @@
 #include <assert.h>
 void assert( int expression );
 ```
+
+##设计模式，编程范式

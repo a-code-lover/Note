@@ -46,7 +46,11 @@ SublimeAStyleFormatter:
  + ctrl+m: jump out of brackets，normal  
  + shift+tab: markdown folding  
  + ctrl+pagedown: switch tag    
-
+ + ctrl + k, ctrl + 1: fold all functions  
+ + ctrl + k, ctrl + j: unfold all  or ctrl + 2          
+ + ctrl + shift + [ or ]: fold and unfold 
+ + ctrl + d: 光标处单词查找
+ 
 5.多行编辑：
 + 鼠标选中多行，按下 Ctrl Shift L (Command Shift L) 即可同时编辑这些行；   
 + 鼠标选中文本，反复按 CTRL D (Command D) 即可继续向下同时选中下一个相同的文本进行同时编辑；   

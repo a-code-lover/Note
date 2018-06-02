@@ -95,7 +95,9 @@ int main() {
 }
 ```
 
-##8.explicit : converting constructor
+##[8.explicit : converting constructor](https://www.cnblogs.com/ymy124/p/3632634.html)
+https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html    
+C++中的explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显示的, 而非隐式的, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式).
 
 ##9.class template
 
@@ -134,7 +136,7 @@ baz = MyClass();         // move assignment
 ##12.inline functions
 >Calling a function generally causes a certain overhead (stacking arguments, jumps, etc...), and thus for very short functions, it may be more efficient to simply insert the code of the function where it is called, instead of performing the process of formally calling a function.
 
-##13.inheritance
+##[13.inheritance](https://harttle.land/2015/06/29/cpp-encapsulation-and-inheritance.html)
 >Unless otherwise specified, the constructors of a derived class calls the default constructor of its base classes (i.e., the constructor taking no arguments). Calling a different constructor of a base class is possible, using the same syntax used to initialize member variables in the initialization list.
 
 |             | public    | protected | private |
@@ -144,6 +146,7 @@ baz = MyClass();         // move assignment
 | private inh | private   | private   | no |
 
 ##[14.polymorphism](http://www.cplusplus.com/doc/tutorial/polymorphism/)
+https://harttle.land/2015/06/28/cpp-polymorphism.html
 >**One of the key features of class inheritance is that a pointer to a derived class is type-compatible with a pointer to its base class. Polymorphism is the art of taking advantage of this simple but powerful and versatile feature.**
 
 >**A virtual member is a member function that can be redefined in a derived class, while preserving its calling properties through references.**
@@ -284,3 +287,6 @@ https://blog.csdn.net/sixdaycoder/article/details/45787713
 
 ###裸指针
 c/c++的原始指针，与智能指针对应。
+
+##[22.volatile](https://blog.csdn.net/friendbkf/article/details/45542337)
+https://blog.csdn.net/whatday/article/details/52511071
