@@ -8,12 +8,13 @@
 + continuous and discrete random variables    categorical 分类的
 + diagonal: 对角线
 + impute missing data 填补缺失数据
++ increment/decrement: 增量/减量
 + instantiate
 + interval: 区间
 + lexicographically: 字典顺序
 + local and global 局部和全局
 + mutex: mutual exclusion 互斥锁
-+ nested : 
++ nested : 嵌套
 + normal distribution and skewed distribution 正态分布和偏态分布
 + numerical type and arithmetic type
 + outlier:野值
@@ -24,6 +25,7 @@
 + pseudo-random number 伪随机数
 + prefix: 字首
 + shrink the scope:缩减范围
++ volatile: 易变的，不稳定的，易爆的
 
 
 ##sign

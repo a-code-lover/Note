@@ -1,5 +1,6 @@
 参考配置:
     http://blog.csdn.net/hfut_jf/article/details/5285386 （markdownediting）
+    https://blog.csdn.net/github_32886825/article/details/52930195   (markdown实时预览)
     http://jokerliang.com/markdown-editing-and-preview-in-sublime-text-3.html （markdown实时预览）
     https://feliving.github.io/Sublime-Text-3-Documentation/ (vintage模式)
     https://segmentfault.com/a/1190000002570753 (快捷键)

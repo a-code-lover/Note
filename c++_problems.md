@@ -22,7 +22,7 @@
 + [指针占几个字节？](https://zhidao.baidu.com/question/505146033.html)
 + [标准库的sizeof(string)占几个字节？64bit和32bit还不一样？](https://zhidao.baidu.com/question/165120550.html)
 + [类的存储字节如何对齐？](https://harttle.land/2015/07/24/effective-cpp-7.html)
-> 对齐方式：最大基本数据类型，函数在代码段，所以与sizeof()无关。
+> 对齐方式：最大基本数据类型，函数在代码段，所以与sizeof()无关。使用``#pragma pack()``自定义对齐
 + [**[Item 8]**为什么不要再析构函数中抛出异常？](https://harttle.land/2015/07/26/effective-cpp-8.html)
 + [c++的异常处理好像有争议哦？](https://www.zhihu.com/question/22889420)
 + [**[Item 9]**在构造/析构时不要调用虚函数](https://harttle.land/tags.html#Effective-C++)
@@ -40,3 +40,34 @@ https://www.cnblogs.com/kwdeblog/p/6097362.html
 + [**[Item 18]**让接口容易被正确使用，不易被误用](https://harttle.land/2015/08/08/effective-cpp-17.html)
 + [**[Item 19]**把类的设计当作类型的设计](https://harttle.land/2015/08/12/effective-cpp-19.html)
 + [**[Item 20]**传递常量引用比传值更好？](https://harttle.land/2015/08/13/effective-cpp-20.html)
++ [**[Item 21]**不要返回对象的引用](https://harttle.land/2015/08/18/effective-cpp-21.html)
++ [**[Item 22]**数据成员应该声明为私有](https://harttle.land/2015/08/19/effective-cpp-22.html)
++ [**[Item 23]**非成员非友元函数优于成员函数](https://harttle.land/2015/08/20/effective-cpp-23.html)
++ [**[Item 24]**用非成员函数来支持所有元的类型转换](https://harttle.land/2015/08/22/effective-cpp-24.html)
++ [**[Item 26]**尽量推迟变量的定义](https://harttle.land/2015/08/24/effective-cpp-26.html)
++ [**[Item 27]**最小化类型转换](https://harttle.land/2015/08/25/effective-cpp-27.html)
++ ??bitwise constness and logical constness
++ [**[Item 28]**不要返回对象内部的句柄](https://harttle.land/2015/08/26/effective-cpp-28.html)
++ [**[Item 29]**追求异常安全的代码](https://harttle.land/2015/08/27/effective-cpp-29.html)
++ [c++的异常处理](https://blog.csdn.net/daheiantian/article/details/6530318)
++ [**[Item 30]**如何理解inline函数？](https://harttle.land/2015/08/28/effective-cpp-30.html)
++ [**[Item 31]**最小化文件之间的编译依赖](https://harttle.land/2015/08/29/effective-cpp-31.html)
++ [**[Item 32]**确保public继承is-a](https://harttle.land/2015/08/30/effective-cpp-32.html)
++ **[Item 38, 39]**组合和private继承   
+https://harttle.land/2015/09/05/effective-cpp-38.html  
+https://harttle.land/2015/09/06/effective-cpp-39.html
++ [**[Item 33]**避免隐藏继承来的名称](https://harttle.land/2015/08/31/effective-cpp-33.html)
++ [**[Item 34]**区分接口继承和实现继承](https://harttle.land/2015/09/01/effective-cpp-34.html)
++ [**[Item 36]**不要重写继承来的非虚函数](https://harttle.land/2015/09/01/effective-cpp-34.html)
++ [**[Item 37]**不要重写父类函数的默认参数](https://harttle.land/2015/09/01/effective-cpp-34.html)
++ ??多继承会遇到哪些问题？
++ [**[Item 41]**隐式接口和编译时多态](https://harttle.land/tags.html#Effective-C++)
++ [**[Item 42]**typename的两种用法](https://harttle.land/2015/09/09/effective-cpp-42.html)
++ [**[Item 43]**访问模板基类中的名称](https://harttle.land/2015/09/10/effective-cpp-43.html)
++ [**[Item 44]**将参数无关的代码重构到模板外去](https://harttle.land/2015/09/12/effective-cpp-44.html)
++ [**[Item 45]**使用成员模板函数来接收所有兼容的类型](https://harttle.land/2015/09/13/effective-cpp-45.html)
++ [STL的traits机制](https://blog.csdn.net/lihao21/article/details/55043881)
++ [预处理指令及宏定义](https://www.cnblogs.com/zi-xing/p/4550246.html)
+http://blog.chinaunix.net/uid-29067889-id-3819834.html
++ 如何重载自增，自减，解引用？前置还是后置？
++ 什么是::operator new?和new有什么差别？  http://blog.jobbole.com/106923/

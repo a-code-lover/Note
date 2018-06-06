@@ -290,3 +290,14 @@ c/c++的原始指针，与智能指针对应。
 
 ##[22.volatile](https://blog.csdn.net/friendbkf/article/details/45542337)
 https://blog.csdn.net/whatday/article/details/52511071
+
+##23.define宏定义的缺陷：
+https://blog.csdn.net/ipmux/article/details/17336809  
+https://blog.csdn.net/wangweixaut061/article/details/6042633  
+https://blog.csdn.net/u013910522/article/details/22672057  
+
+##24.functor仿函数：
+仿函数重载(),生成的是对象，而不是函数调用。 
+https://my.oschina.net/llehs/blog/180594  
+http://www.bogotobogo.com/cplusplus/functors.php   
+https://blog.csdn.net/tianshuai1111/article/details/7687983   
