@@ -26,4 +26,7 @@ ctrl + j:智能提示
 5.了解Windows编程：https://blog.csdn.net/bigpudding24/article/details/48812399
 **MSDN**
 
-6.alt + d == F6
+6.
++ alt + d == F6
++ alt + space
+
