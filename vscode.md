@@ -2,9 +2,13 @@
 
 ## 1.reference
 
++ [official](https://code.visualstudio.com/docs/languages/cpp)
++ [vscode入门](https://www.jianshu.com/p/3dda4756eca5)
 + [vim入门](https://feifeiyum.github.io/2017/01/23/vimusage/)
 + [中文文档](https://legacy.gitbook.com/book/jeasonstudio/vscode-cn-doc/details)
 + [基本使用教程](https://www.w3cschool.cn/visualstudiocode/)
++ [配置c++](https://www.zhihu.com/question/30315894)
++ [配置c++](https://blog.csdn.net/qq_32126633/article/details/78838554)
 
 ## 2.shortcut
 
@@ -19,5 +23,12 @@
 + ctrl + k,ctrl + s : 查看所有快捷键
 
 ### (2)code
+
 + ctrl + [/] : add tab
 + ctrl + i : select current line
+
+### (3)plugin  
+
+#### settting sync
+
++ shift + alt + u/d : 同步

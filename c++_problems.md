@@ -1,4 +1,6 @@
-##basic 
+# questions of c++
+
+## 1.basic
 
 + [进程的地址空间？](https://harttle.land/2015/07/22/memory-segment.html)
 + [哪些变量会默认初始化，哪些会随机初始化？](https://harttle.land/2015/10/05/cpp-variable-init.html)
@@ -6,9 +8,8 @@
 + [什么情况下stl的迭代器和引用会非法化？](https://blog.csdn.net/y1196645376/article/details/52938474)
 + [类的对象会调用默认构造函数，对象的指针不会调用默认构造函数？](https://harttle.land/2015/06/22/cpp-object-lifecycle.html)
 + int * a = new int(10); a在栈， 10在堆。
-+ [全局对象，静态对象，局部对象，const， static， static const](https://blog.csdn.net/jinpeng_cumt/article/details/52723131)  
-[静态函数只能访问静态变量。static变量在类外初始化，避免重复定义。
-常量对象只能访问构造函数，析构函数和常量函数，所有属性赋值都会编译报错。](https://harttle.land/2015/06/24/cpp-static-and-const-member.html)
++ [全局对象，静态对象，局部对象，const， static， static const](https://blog.csdn.net/jinpeng_cumt/article/details/52723131)
++ [静态函数只能访问静态变量。static变量在类外初始化，避免重复定义。常量对象只能访问构造函数，析构函数和常量函数，所有属性赋值都会编译报错。](https://harttle.land/2015/06/24/cpp-static-and-const-member.html)
 > const修饰的量确切说叫只读量，不是常量。
 > 可能在栈区，可能在全局区，看作用域以及有没有static修饰了，如果没有对其取地址的话，也可能被编译器优化为字
 > 面常量。
@@ -34,7 +35,7 @@
 + [**[Item 12]**完整地拷贝对象](https://harttle.land/2015/08/01/effective-cpp-12.html)
 + [**[Item 14]**??资源管理类要特别注意拷贝行为](https://harttle.land/2015/08/04/effective-cpp-14.html)
 + [数组名类似指针？(了解一下，不纠结) 指针数组，数组指针](https://www.cnblogs.com/ddx-deng/archive/2012/12/16/3755862.html)
-https://www.cnblogs.com/kwdeblog/p/6097362.html
++ <https://www.cnblogs.com/kwdeblog/p/6097362.html>
 + [**[Item 16]**使用同样的形式来new和delete](https://harttle.land/2015/08/07/effective-cpp-16.html)
 + [**[Item 17]**在单独的语句将new的对象放入智能指针中](https://harttle.land/2015/08/08/effective-cpp-17.html)
 + [**[Item 18]**让接口容易被正确使用，不易被误用](https://harttle.land/2015/08/08/effective-cpp-17.html)
@@ -53,9 +54,8 @@ https://www.cnblogs.com/kwdeblog/p/6097362.html
 + [**[Item 30]**如何理解inline函数？](https://harttle.land/2015/08/28/effective-cpp-30.html)
 + [**[Item 31]**最小化文件之间的编译依赖](https://harttle.land/2015/08/29/effective-cpp-31.html)
 + [**[Item 32]**确保public继承is-a](https://harttle.land/2015/08/30/effective-cpp-32.html)
-+ **[Item 38, 39]**组合和private继承   
-https://harttle.land/2015/09/05/effective-cpp-38.html  
-https://harttle.land/2015/09/06/effective-cpp-39.html
++ [**[Item 38, 39]**组合和private继承](https://harttle.land/2015/09/05/effective-cpp-38.html)
++ <https://harttle.land/2015/09/06/effective-cpp-39.html>
 + [**[Item 33]**避免隐藏继承来的名称](https://harttle.land/2015/08/31/effective-cpp-33.html)
 + [**[Item 34]**区分接口继承和实现继承](https://harttle.land/2015/09/01/effective-cpp-34.html)
 + [**[Item 36]**不要重写继承来的非虚函数](https://harttle.land/2015/09/01/effective-cpp-34.html)
@@ -68,6 +68,6 @@ https://harttle.land/2015/09/06/effective-cpp-39.html
 + [**[Item 45]**使用成员模板函数来接收所有兼容的类型](https://harttle.land/2015/09/13/effective-cpp-45.html)
 + [STL的traits机制](https://blog.csdn.net/lihao21/article/details/55043881)
 + [预处理指令及宏定义](https://www.cnblogs.com/zi-xing/p/4550246.html)
-http://blog.chinaunix.net/uid-29067889-id-3819834.html
++ <http://blog.chinaunix.net/uid-29067889-id-3819834.html>
 + 如何重载自增，自减，解引用？前置还是后置？
-+ 什么是::operator new?和new有什么差别？  http://blog.jobbole.com/106923/
++ 什么是::operator new?和new有什么差别？  <http://blog.jobbole.com/106923/>

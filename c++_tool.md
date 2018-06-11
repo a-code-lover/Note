@@ -33,3 +33,8 @@ void assert( int expression );
 + "-std=c++11"
 + "-Wall" (输出gcc提供的所有警告)
 + "-static-libgcc" (链接静态库)
+
+## 3.extension library
+
+### (1)日志库：[boost::log and glog](https://blog.csdn.net/lltaoyy/article/details/56674538)
+

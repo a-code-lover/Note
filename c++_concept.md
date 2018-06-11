@@ -2,14 +2,16 @@
 
 [参考教程](http://www.cplusplus.com/doc/tutorial/)
 
-1.NULL:macro definition of a null pointer, in c++11 standard, we use nullptr.
-  #define NULL 0 or #define NULL (void*)0 , in fact the 0 has different meanings depending on the context in which its used.
+1.NULL:macro definition of a null pointer, in c++11 standard, we use nullptr. ``#define NULL 0`` or ``#define NULL (void*)0`` , in fact the 0 has different meanings depending on the context in which its used.
 
 ## 2.class initialization
 
-`= default` **显式默认**  `= delete` **显式禁用某个函数**
+``= default`` **显式默认**  ``= delete`` **显式禁用某个函数**
 
-as soon as a class has some constructor taking any number of parameters explicitly declared, the compiler no longer provides an implicit default constructor, and no longer allows the declaration of new objects of that class without arguments.(http://www.cplusplus.com/doc/tutorial/classes2/)
+as soon as a class has some constructor taking any number of parameters explicitly declared, the compiler no longer provides an implicit default constructor, and no longer allows the declaration of new objects of that class without arguments.
+
+http://www.cplusplus.com/doc/tutorial/classes2/
+
 ![class initialization](Rsc/c++_class_initialize1)
 ![class initialization](Rsc/c++_class_initialize)
 <!--what, why can't add an extension filename -->
@@ -17,19 +19,18 @@ as soon as a class has some constructor taking any number of parameters explicit
 ## 3.struct and union for class
 
 >Classes can be defined not only with keyword class, >but also with keywords struct and union.
-
+>
 >The keyword struct, generally used to declare plain data structures, can also be used to declare classes that have member functions, with the same syntax as with keyword class. The only difference between both is that members of classes declared with the keyword struct have public access by default, while members of classes declared with the keyword class have private access by default. For all other purposes both keywords are equivalent in this context.
-
+>
 >Conversely, the concept of unions is different from that of classes declared with struct and class, since unions only store one data member at a time, but nevertheless they are also classes and can thus also hold member functions. The default access in union classes is public.
 
-## 4.compilation error and runtime error 
+## 4.compilation error and runtime error
 
 ## 5.operator overload
 
 Operators are overloaded by means of operator functions, which are regular functions with special names.
 
 ```c++
-
 class CVector {
   public:
     int x,y;
@@ -54,7 +55,6 @@ CVector operator+ (const CVector& lhs, const CVector& rhs) {
 
 c = a + b;
 c = a.operator+ (b);
-
 ```
 
 ## 6.static
@@ -65,7 +65,7 @@ Because member functions are like non-member functions, they cannot access non-s
 ## 7.const object
 
 >const objects are limited to access only member functions marked as const, but non-const objects are not restricted and thus can access both const and non-const member functions alike.
-
+>
 >When an object of a class is qualified as a const object:const MyClass myobject;
 The access to its data members from outside the class is restricted to read-only, as if all its data members were const for those accessing them from outside the class. Note though, that the constructor is still called and is allowed to initialize and modify these data members:
 
@@ -102,10 +102,11 @@ int main() {
 }
 ```
 
-## [8.explicit : converting constructor]
+## 8.explicit : converting constructor
 
-(https://www.cnblogs.com/ymy124/p/3632634.html)
-https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html    
++ <https://www.cnblogs.com/ymy124/p/3632634.html>
++ <https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html>
+
 C++中的explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显示的, 而非隐式的, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式).
 
 ## 9.class template
@@ -122,18 +123,18 @@ T mypair<T>::getmax ()
 ## 10.copy constructor
 
 [shallow copy vs deep copy](https://stackoverflow.com/questions/2657810/deep-copy-vs-shallow-copy)
-http://www.cplusplus.com/doc/tutorial/classes2/
+<http://www.cplusplus.com/doc/tutorial/classes2/>
 
 ```c++
 MyClass foo;
 MyClass bar (foo);       // object initialization: copy constructor called
 MyClass baz = foo;       // object initialization: copy constructor called
-foo = bar;               // object already initialized: copy assignment called 
+foo = bar;               // object already initialized: copy assignment called
 ```
 
-**Note that baz is initialized on construction using an equal sign, but this is not an assignment operation! (although it may look like one)**
+Note that baz is initialized on construction using an equal sign, but this is not an assignment operation! (although it may look like one)
 
-```
+```c++
 MyClass fn();            // function returning a MyClass object
 MyClass foo;             // default constructor
 MyClass bar = foo;       // copy constructor
@@ -148,8 +149,10 @@ baz = MyClass();         // move assignment
 
 >Calling a function generally causes a certain overhead (stacking arguments, jumps, etc...), and thus for very short functions, it may be more efficient to simply insert the code of the function where it is called, instead of performing the process of formally calling a function.
 
-## [13.inheritance]
-(https://harttle.land/2015/06/29/cpp-encapsulation-and-inheritance.html)
+## 13.inheritance
+
+<https://harttle.land/2015/06/29/cpp-encapsulation-and-inheritance.html>
+
 >Unless otherwise specified, the constructors of a derived class calls the default constructor of its base classes (i.e., the constructor taking no arguments). Calling a different constructor of a base class is possible, using the same syntax used to initialize member variables in the initialization list.
 
 |             | public    | protected | private |
@@ -160,23 +163,22 @@ baz = MyClass();         // move assignment
 
 ## [14.polymorphism]
 
-(http://www.cplusplus.com/doc/tutorial/polymorphism/)
-https://harttle.land/2015/06/28/cpp-polymorphism.html
+<http://www.cplusplus.com/doc/tutorial/polymorphism/>  
+<https://harttle.land/2015/06/28/cpp-polymorphism.html>
 >**One of the key features of class inheritance is that a pointer to a derived class is type-compatible with a pointer to its base class. Polymorphism is the art of taking advantage of this simple but powerful and versatile feature.**
-
+>
 >**A virtual member is a member function that can be redefined in a derived class, while preserving its calling properties through references.**
-
+>
 >**A class that declares or inherits a virtual function is called a polymorphic class. Classes that contain at least one pure virtual function are known as abstract base classes. Virtual members and abstract classes grant C++ polymorphic characteristics, most useful for object-oriented projects.**
-
+>
 >**An abstract base class is not totally useless. It can be used to create pointers to it, and take advantage of all its polymorphic abilities. And can actually be dereferenced when pointing to objects of derived (non-abstract) classes.**
 
 ## [15.type casting]
 
-(http://www.cplusplus.com/doc/tutorial/typecasting/)    
-**no_safe**
+<http://www.cplusplus.com/doc/tutorial/typecasting/)>  
+no_safe
 
 ```c++
-
 double x = 10.3;
 int y;
 y = int (x);    // functional notation
@@ -194,15 +196,16 @@ y = (int) x;    // c-like cast notation
 5. 尾随返回类型（可选）。
 6. “lambda 体”
 
-![](Rsc/lambda.jpg)
+![lambda](Rsc/lambda.jpg)
 
 ## [18.可变模板参数](http://www.cnblogs.com/qicosmos/p/4325949.html)
 
-**可变模板参数函数**
-```c++ 
+### (1)可变模板参数函数
+
+```c++
 template <class... T>
 void f(T... args)
-{    
+{
     cout << sizeof...(args) << endl; //打印变参的个数
 }
 
@@ -211,7 +214,8 @@ f(1, 2);    //2
 f(1, 2.5, "");    //3
 ```
 
-**递归展开：**
+### (2)递归展开：
+
 ```c++
 template<typename T>
 T sum(T t)
@@ -227,7 +231,8 @@ T sum (T first, Types ... rest)
 sum(1,2,3,4); //10
 ```
 
-**逗号展开**
+### (3)逗号展开
+
 ```c++
 template <class T>
 void printarg(T t)
@@ -244,7 +249,8 @@ void expand(Args... args)
 expand(1,2,3,4);
 ```
 
-**可变模板参数类**
+### (4)可变模板参数类
+
 ```c++
 //前向声明,可以忽略
 template<typename... Args>
@@ -265,14 +271,15 @@ struct Sum<Last>
 };
 ```
 
-
 ## 19.完美转发 std::forward
 
 >When used according to the following recipe in a function template, forwards the argument to another function with the value category it had when passed to the calling function.
-**传参时保持参数的左值或右值属性**
+
+传参时保持参数的左值或右值属性
+
 ```c++
 template<class T>
-void wrapper(T&& arg) 
+void wrapper(T&& arg)
 {
     foo(std::forward<T>(arg)); // Forward a single argument.
 }
@@ -286,48 +293,51 @@ Resource acquisition is auquisition.
 
 ## 21.指针
 
-### 智能指针
+### (1)智能指针
 
-**shared_ptr**   
-https://blog.csdn.net/Xiejingfa/article/details/50750037  
-https://heleifz.github.io/14696398760857.html  
-https://blog.csdn.net/sixdaycoder/article/details/45787713
+**shared_ptr**  
+<https://blog.csdn.net/Xiejingfa/article/details/50750037>  
+<https://heleifz.github.io/14696398760857.html>  
+<https://blog.csdn.net/sixdaycoder/article/details/45787713>
 
 **weak_ptr**
 用于解决shared_ptr相互引用时的死锁问题。  
 
-**unique_ptr**
+**unique_ptr**  一次
 
-### 野指针
+### (2)野指针
 
 >野指针指向一个已删除的对象或未申请访问受限内存区域的指针。与空指针不同，野指针无法通过简单地判断是否为 NULL避免，而只能通过养成良好的编程习惯来尽力减少。对野指针进行操作很容易造成程序错误。
 
 成因：  
+
 + 指针未初始化：任何指针变量刚被创建时不会自动成为NULL指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同时应当被初始化，要么将指针设置为NULL，要么让它指向合法的内存。
 + 指针对象释放后未置空：别看free和delete的名字（尤其是delete），它们只是把指针所指的内存给释放掉，但并没有把指针本身干掉。此时指针指向的就是“垃圾”内存。释放后的指针应立即将指针置为NULL，防止产生“野指针”。
 + 指针操作超过作用域
 
-### 悬空指针
+### (3)悬空指针
 
 >在C/C++等语言中，悬空指针（Dangling Pointer）指的是：一个指针的指向对象已被删除，那么就成了悬空指针。野指针是那些未初始化的指针。有时也把野指针和悬空指>针通称悬空指针。
 
-###裸指针
+### (4)裸指针
 
 c/c++的原始指针，与智能指针对应。
 
-## [22.volatile](https://blog.csdn.net/friendbkf/article/details/45542337)
+## 22.volatile
 
-https://blog.csdn.net/whatday/article/details/52511071
++ <https://blog.csdn.net/friendbkf/article/details/45542337>  
++ <https://blog.csdn.net/whatday/article/details/52511071>
 
 ## 23.define宏定义的缺陷：
 
-https://blog.csdn.net/ipmux/article/details/17336809  
-https://blog.csdn.net/wangweixaut061/article/details/6042633  
-https://blog.csdn.net/u013910522/article/details/22672057  
++ <https://blog.csdn.net/ipmux/article/details/17336809>  
++ <https://blog.csdn.net/wangweixaut061/article/details/6042633>  
++ <https://blog.csdn.net/u013910522/article/details/22672057>
 
 ## 24.functor仿函数：
 
-仿函数重载(),生成的是对象，而不是函数调用。 
-https://my.oschina.net/llehs/blog/180594  
-http://www.bogotobogo.com/cplusplus/functors.php   
-https://blog.csdn.net/tianshuai1111/article/details/7687983   
+仿函数重载(),生成的是对象，而不是函数调用。  
+
++ <https://my.oschina.net/llehs/blog/180594>
++ <http://www.bogotobogo.com/cplusplus/functors.php>  
++ <https://blog.csdn.net/tianshuai1111/article/details/7687983>
