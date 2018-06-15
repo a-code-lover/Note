@@ -71,3 +71,5 @@
 + <http://blog.chinaunix.net/uid-29067889-id-3819834.html>
 + 如何重载自增，自减，解引用？前置还是后置？
 + 什么是::operator new?和new有什么差别？  <http://blog.jobbole.com/106923/>
++ [关键词union怎么用？](http://zh.cppreference.com/w/cpp/language/union)
++ [enum枚举变量所占内存大小？](https://blog.csdn.net/bulebin/article/details/54388735)

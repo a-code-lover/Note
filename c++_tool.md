@@ -18,6 +18,10 @@
 void assert( int expression );
 ```
 
+### (3)[new, ::operator new, ::operator delete](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
+
+<font color=#ff1111>注：c++的new handle机制。</font>
+
 ## 2.G++
 
 [reference : Linux下gcc和gdb](http://blog.51cto.com/goodhx/1734760)
@@ -37,4 +41,3 @@ void assert( int expression );
 ## 3.extension library
 
 ### (1)日志库：[boost::log and glog](https://blog.csdn.net/lltaoyy/article/details/56674538)
-
