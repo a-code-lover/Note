@@ -346,3 +346,13 @@ c/c++的原始指针，与智能指针对应。
 
 <https://blog.csdn.net/magoyang/article/details/52480001>
 
+## 26.偏特化（partial specialization
+
+>定义：正对任何template参数更进一步的条件限制，所设计出来的一个特化版本。
+
+```c++
+template<typename T>
+class c {...}; //这个泛化版本允许T为任何类型
+template<typename T>
+class c(T*) {...}; //这个特化版本仅适用T为原生指标
+```
