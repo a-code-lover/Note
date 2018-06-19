@@ -1,13 +1,13 @@
-editting shortcut：
+# editting zhortcut：
 
 + A：jump to the end of line，normal to insert mode 
 + di+bracket：delete all in brackets 
-+ zc/zo ： 当前折叠
++ zc/aC/zo/zO ： 当前折叠
 + zm/zr ： 所有折叠
 + [列编辑](https://www.ibm.com/developerworks/cn/linux/l-cn-vimcolumn/index.html)
 + [与系统剪切板交互](https://blog.csdn.net/zhangxiao93/article/details/53677764)
 
-qucik jump:
+## qucik jump
 
 + 数值 + G 光标移至“数值”所指行的行首；
 + H 光标移至当前屏幕显示首行的行首；
@@ -17,4 +17,3 @@ qucik jump:
 + z + . 滚动屏幕，使当前光标所在行处于屏幕中间行；
 + z + - 滚动屏幕，使当前光标所在行处于屏幕最后一行；
 + ctrl + u, 使当前光标向上滚动半屏 pageup 整屏
-+ ctrl + d, 使当前光标向下滚动半屏 pagedown 整屏

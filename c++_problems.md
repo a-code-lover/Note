@@ -73,3 +73,7 @@
 + 什么是::operator new?和new有什么差别？  <http://blog.jobbole.com/106923/>
 + [关键词union怎么用？](http://zh.cppreference.com/w/cpp/language/union)
 + [enum枚举变量所占内存大小？](https://blog.csdn.net/bulebin/article/details/54388735)
++ 由constexpr引起的常量表达式问题：
+  + [神秘的constexpr](https://www.cnblogs.com/wangxiaobao/p/5966394.html)
+  + [编译器常量和运行期常量](https://bbs.csdn.net/topics/100054572)
+  + [VLA变长数组](https://www.cnblogs.com/qingergege/p/7520565.html)

@@ -26,6 +26,7 @@
 
 + ctrl + [/] : add tab
 + ctrl + i : select current line
++ ctrl + shift + p + 输入fold ： 可以查看所有折叠快捷键
 
 ### (3)plugin  
 

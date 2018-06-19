@@ -341,3 +341,8 @@ c/c++的原始指针，与智能指针对应。
 + <https://my.oschina.net/llehs/blog/180594>
 + <http://www.bogotobogo.com/cplusplus/functors.php>  
 + <https://blog.csdn.net/tianshuai1111/article/details/7687983>
+
+## 25.RTTI机制
+
+<https://blog.csdn.net/magoyang/article/details/52480001>
+

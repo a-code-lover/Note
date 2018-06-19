@@ -39,7 +39,7 @@ set: only definition of ++ and --, but not + 1.
 
 ### (7)Node \* volatile \* p
 
-## 2.name
+## 2. name
 
 ### (1)下划线命名
 
@@ -50,3 +50,7 @@ set: only definition of ++ and --, but not + 1.
 + ::name 表示全局作用域
 + class::name 表示类作用域
 + namespace::name 表示命名空间作用域
+
+## 3. error
+
+### (1)[Segmentation Fault: ](http://silencewt.github.io/2015/05/11/Segmentation-Fault%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%E6%80%BB%E7%BB%93/)
