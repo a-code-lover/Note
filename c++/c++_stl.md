@@ -69,8 +69,8 @@ struct Iterator {
 + 利用function template 的自变量推导机制。
 + 加上原生类型和const的偏特化。
 + 注意typeid的使用。
-+ 迭代器最常用的五种型别：value_type , difference_type , pointer , reference , iterator_categor
-+ 五种迭代器：input Interator, output Iterator, Forward Interator, Bidirectionnal, RandomAccess
++ 迭代器最常用的五种型别(嵌套的)：value_type , difference_type , pointer , reference , iterator_categor
++ 五种迭代器(继承，重载)：input Interator, output Iterator, Forward Interator, Bidirectionnal, RandomAccess
 
 ```c++
 template <class T>
@@ -89,4 +89,34 @@ struct iterator_traits<const T*> {
 }
 ```
 
+```c++
+//stl提供了iterator class作为迭代器的父类
+template <class Category,
+          class T,
+          class Distance = ptrdiff_t,
+          class Pointer = T *,
+          class Reference = T&,>
+struct iterator {
+    typedef Category iterator_catogary;
+    typedef T value_type;
+    typedef Distance defference_type;
+    typedef Pointer pointer;
+    typedef Reference reference;
+}
+```
 
+> traits编程技法，大量运用于STL中。它运用nest type的编码技巧和编译器的template自变量推导功能，补强c++未能提供的关于类型的认证功能，补强c++不为strong type的遗憾。
+
+## 3.源码：序列容器Sequence Containers
+
+### (1)vector
+
+### (2)list
+
+### (3)deque
+
+### (4)stack
+
+### (5)queue
+
+### (6)priority_queue

@@ -1,6 +1,9 @@
 # concept of c++
 
-[参考教程](http://www.cplusplus.com/doc/tutorial/)
+参考教程：
+
++ <http://www.cplusplus.com/doc/tutorial/>
++ [effective c++中文翻译版](https://wizardforcel.gitbooks.io/effective-cpp/content/)
 
 1.NULL:macro definition of a null pointer, in c++11 standard, we use nullptr. ``#define NULL 0`` or ``#define NULL (void*)0`` , in fact the 0 has different meanings depending on the context in which its used.
 
@@ -10,11 +13,7 @@
 
 as soon as a class has some constructor taking any number of parameters explicitly declared, the compiler no longer provides an implicit default constructor, and no longer allows the declaration of new objects of that class without arguments.
 
-http://www.cplusplus.com/doc/tutorial/classes2/
-
-![class initialization](Rsc/c++_class_initialize1)
-![class initialization](Rsc/c++_class_initialize)
-<!--what, why can't add an extension filename -->
+<http://www.cplusplus.com/doc/tutorial/classes2/>
 
 ## 3.struct and union for class
 
@@ -346,7 +345,7 @@ c/c++的原始指针，与智能指针对应。
 
 <https://blog.csdn.net/magoyang/article/details/52480001>
 
-## 26.偏特化（partial specialization
+## 26.全特化和偏特化
 
 >定义：正对任何template参数更进一步的条件限制，所设计出来的一个特化版本。
 
@@ -356,3 +355,8 @@ class c {...}; //这个泛化版本允许T为任何类型
 template<typename T>
 class c(T*) {...}; //这个特化版本仅适用T为原生指标
 ```
+
+## 27.TMP模板元编程
+
++ <https://www.cnblogs.com/liangliangh/p/4219879.html>
+

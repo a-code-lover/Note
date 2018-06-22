@@ -79,3 +79,7 @@
   + [VLA变长数组](https://www.cnblogs.com/qingergege/p/7520565.html)
 + [内存分配方式](https://blog.csdn.net/gukesdo/article/details/6548256)
 + 自己实现scoped_ptr和shared_ptr
++ 虚表和虚表指针：  
+  + <http://blog.51cto.com/boyishachang/1284520>
+  + <https://songlee24.github.io/2014/09/02/cpp-virtual-table/>
++ [断言与静态断言](http://deltamaster.is-programmer.com/posts/29649.html)
