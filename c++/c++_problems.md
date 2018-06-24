@@ -44,7 +44,7 @@
 + [Item 21 : 不要返回对象的引用](https://harttle.land/2015/08/18/effective-cpp-21.html)
 + [Item 22 : 数据成员应该声明为私有](https://harttle.land/2015/08/19/effective-cpp-22.html)
 + [Item 23 : 非成员非友元函数优于成员函数](https://harttle.land/2015/08/20/effective-cpp-23.html)
-+ [Item 24 : 用非成员函数来支持所有元的类型转换](https://harttle.land/2015/08/22/effective-cpp-24.html)
++ [Item 24 : 用非成员函数来支持所有元的类型转换](https:/harttle.land/2015/08/22/effective-cpp-24.html)
 + [Item 26 : 尽量推迟变量的定义](https://harttle.land/2015/08/24/effective-cpp-26.html)
 + [Item 27 : 最小化类型转换](https://harttle.land/2015/08/25/effective-cpp-27.html)
 + ??bitwise constness and logical constness
@@ -83,3 +83,4 @@
   + <http://blog.51cto.com/boyishachang/1284520>
   + <https://songlee24.github.io/2014/09/02/cpp-virtual-table/>
 + [断言与静态断言](http://deltamaster.is-programmer.com/posts/29649.html)
++ [c++11新特性](http://blog.guoyb.com/tags/C-11/)
