@@ -18,4 +18,9 @@
 
 ## 23.merge k sorted lists
 
-思路：1. priority_queue(不够熟练)  2. merge 2 to merge n
+思路：1. priority_queue(不够熟练)  2. incursive, merge 2 to merge n
+
+## 28.implement strstr
+
+<https://leetcode.com/problems/implement-strstr/discuss/12956/Explained-4ms-Easy-C++-solution>  
+思路：1. brutal  2.kmp
