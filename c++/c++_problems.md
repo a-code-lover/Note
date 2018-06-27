@@ -84,3 +84,4 @@
   + <https://songlee24.github.io/2014/09/02/cpp-virtual-table/>
 + [断言与静态断言](http://deltamaster.is-programmer.com/posts/29649.html)
 + [c++11新特性](http://blog.guoyb.com/tags/C-11/)
++ queue pop()操作：对象销毁？内存释放？

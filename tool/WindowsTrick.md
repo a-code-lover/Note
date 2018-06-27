@@ -8,9 +8,10 @@
 
 ## 2.problems
 
-### (1)打开的进程使用了dll文件导致文件无法删除:
+### (1)打开的进程使用了dll文件导致文件无法删除
 
 [tasklist命令](http://tech.sina.com.cn/s/s/2008-11-27/16192609051.shtml)
+使用系统管理员的powershell。
 
 ## 3.VisualStudio
 
@@ -39,3 +40,30 @@
 + win + b : cursor to tray
 + alt + d == F6
 + alt + space
++ shift + 右击 : 当前文件夹打开power shell
+
+## 6.批处理
+
+```bat
+rem 批量重命名
+@echo off
+rem 启用"延缓环境变量扩充"
+setlocal enabledelayedexpansion
+cd f:/test
+set /a num = 0
+rem /r为文件 /d为目录 !!表示变量延迟
+for /r %%i in (*) do (
+  set /a num += 1
+  echo %%~ni
+  ren %%i  !num!%%~ni.pdf
+)
+echo 批量重命名完成!
+pause
+```
+
+### (1)变量  
+
+<https://www.cnblogs.com/starspace/archive/2009/01/05/1368828.html>  
+<http://www.yunweipai.com/archives/7315.html>  
+[循环变量](https://blog.csdn.net/u010161379/article/details/50956652)  
+[文件路径与名称提取](https://blog.csdn.net/gdp12315_gu/article/details/51322391)
