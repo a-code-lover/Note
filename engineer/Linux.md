@@ -13,3 +13,9 @@
 
 + [ls -a -l -F -s -t -S / tree -L n](https://blog.csdn.net/xuehuafeiwu123/article/details/53817161)
 + shift + pageup/pagedown : terminal 翻页
+
+## 4.tool
+
+### (1)ssh
+
+<http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html>

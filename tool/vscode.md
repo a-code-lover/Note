@@ -27,6 +27,8 @@
 + ctrl + [/] : add tab
 + ctrl + i : select current line
 + ctrl + shift + p + 输入fold ： 可以查看所有折叠快捷键
++ alt + arrow up/down : move one line up or down
++ shift + all + mouse darg: choose columns
 
 ### (3)plugin  
 

@@ -12,6 +12,7 @@
 ``= default`` **显式默认**  ``= delete`` **显式禁用某个函数**
 
 as soon as a class has some constructor taking any number of parameters explicitly declared, the compiler no longer provides an implicit default constructor, and no longer allows the declaration of new objects of that class without arguments.
+对于内置类型而言，new仅仅是分配内存，除非后面显示加(),相当于调用它的构造函数，对于自定义类型而言，只要一调用new，那么编译器不仅仅给它分配内存，还调用它的默认构造函数初始化，即使后面没有加()。
 
 <http://www.cplusplus.com/doc/tutorial/classes2/>
 
@@ -196,6 +197,13 @@ y = (int) x;    // c-like cast notation
 6. “lambda 体”
 
 ![lambda](Rsc/lambda.jpg)
+
+```c++
+result = [](const string& str){return"Hello World" + str;}("3!");
+//equal to below
+auto lambda = [](const string& str){return"Hello World" + str;};
+string result = lambda("3!");
+```
 
 ## [18.可变模板参数](http://www.cnblogs.com/qicosmos/p/4325949.html)
 
