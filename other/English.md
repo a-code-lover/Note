@@ -32,6 +32,7 @@
 + pseudo-random number 伪随机数
 + prefix: 字首
 + shrink the scope:缩减范围
++ verbose: detailed or prolix
 + volatile: 易变的，不稳定的，易爆的
 
 ## sign
