@@ -68,11 +68,11 @@ int findSubstring(string s){
 
         while(/* counter condition */){
 
-                /* update d here if finding minimum*/
+            /* update d here if finding minimum*/
 
             //increase begin to make it invalid/valid again
 
-            if(map[s[begin++]]++ ?){ /*modify counter here*/ }
+            if(map[s[begin++]]++ ?){ /*modify counter here*/ }
         }  
 
         /* update d here if finding maximum*/
@@ -84,3 +84,11 @@ int findSubstring(string s){
 ## 79.word search
 
 思路：bfs
+
+## 91.decode ways
+
+思路：iterative, (recursive search from back to front?)
+
+## 94.binaty tree inorder traversal
+
+思路：use iterative instead of recursive.
