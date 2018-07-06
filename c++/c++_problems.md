@@ -3,6 +3,7 @@
 ## 1.basic
 
 + [进程的地址空间？](https://harttle.land/2015/07/22/memory-segment.html)
+> 进程持有堆空间，线程持有栈空间。栈空间规模一般为几M，如1M，4M。堆的规模，理论上内存有多大，堆就可以建多大。堆大小在编译是就固定， 堆大小在运行是动态变化。
 + [哪些变量会默认初始化，哪些会随机初始化？](https://harttle.land/2015/10/05/cpp-variable-init.html)
 + [构造函数和析构函数没有返回值，以及抛出异常的问题？](https://www.cnblogs.com/luxiaoxun/archive/2012/09/06/2673249.html)
 + [什么情况下stl的迭代器和引用会非法化？](https://blog.csdn.net/y1196645376/article/details/52938474)

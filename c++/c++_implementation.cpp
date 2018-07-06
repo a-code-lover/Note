@@ -2,10 +2,17 @@
  *基础函数的实现
  *
  */ 
-
-
-# include <iostream>
-# include <vector>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <stack>
+#include <queue>
+#include <algorithm>
+#include <climits>
+#include <cmath>
 
 using namespace std;
 
@@ -46,4 +53,28 @@ int strstr_kmp(string haystack, string needle) {
         }
     }
     return -1;
+}
+
+//iterativer for binart tree traverssal
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {};
+};
+vector<int> inorderTraversal(TreeNode* root) {
+    vector<int> inorder;
+    if (!root) return inorder;
+    TreeNode *cur = root;
+    stack<TreeNode *> s;
+    while (cur || !s.empty()) {
+        while (cur) {
+            s.push(cur);
+            cur = cur->left;
+        }
+        cur = s.top();
+        s.pop();
+        inorder.push_back(cur->val);
+        cur = cur->right;
+    }
 }

@@ -1,6 +1,6 @@
 # 错误汇总
 
-## 1.
+## 1
 
 + sizeof: return the sizes of Byte，size：return the sizes of element，
 

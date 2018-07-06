@@ -16,4 +16,3 @@
 
 <https://www.zhihu.com/question/23345991>
 <https://blog.csdn.net/myan/article/details/1726553>
-<https://www.ibm.com/developerworks/cn/analytics/library/ba-1507-mapreducefiveframes/index.html>

@@ -51,8 +51,6 @@ int binarySearch(int arr[], int low, int high, int target) {
 
 ## 4.链表
 
-1.
-
 ## 5.哈希表
 
 哈希函数，冲突检测，插入实现？？？
@@ -60,4 +58,5 @@ int binarySearch(int arr[], int low, int high, int target) {
 ## 6.树
 
 ### 非递归实现遍历
-<https://leetcode.com/problems/binary-tree-inorder-traversal/description/>
+
+https://leetcode.com/problems/binary-tree-inorder-traversal/description/>

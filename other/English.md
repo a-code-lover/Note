@@ -47,3 +47,7 @@
 + paranthesis
 + brackets
 + equal sign
+
+## abbreviation
+
+CLI: command line interface

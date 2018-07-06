@@ -92,3 +92,6 @@ int findSubstring(string s){
 ## 94.binaty tree inorder traversal
 
 思路：use iterative instead of recursive.
+注：递归和迭代的运行时间是一样的，只是递归用到系统内存的栈，迭代使用数据结构的栈。
+
+## all. use iterative to deal with binary tree
