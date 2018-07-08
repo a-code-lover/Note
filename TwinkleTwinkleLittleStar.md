@@ -2,10 +2,12 @@
 
 Note: just want to write something interesting here
 
-万事开头难，中间难，结尾更难。
+everything is hard in the begin, as in the middle, harder in the end.
 
-读书最重要的是有自己的理解和看法，即思考。
+reflection is what's most important in reading.
 
-不要让时代的悲剧成为你个人的悲剧。
+don't let the tragedy of the time to become yours.
 
 try all English expressions in my notes.
+
+its interesting to learn the tech stack of facebook or twitter.

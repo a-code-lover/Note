@@ -43,6 +43,7 @@
 + [Item 19 : 把类的设计当作类型的设计](https://harttle.land/2015/08/12/effective-cpp-19.html)
 + [Item 20 : 传递常量引用比传值更好？](https://harttle.land/2015/08/13/effective-cpp-20.html)
 + [Item 21 : 不要返回对象的引用](https://harttle.land/2015/08/18/effective-cpp-21.html)
+> int *x = new int(100); 在函数退出时，x会被撤销，但是栈空间并没有释放，对该地址的解引用仍然有效，所以函数返回x（地址拷贝），这是合法合理的。
 + [Item 22 : 数据成员应该声明为私有](https://harttle.land/2015/08/19/effective-cpp-22.html)
 + [Item 23 : 非成员非友元函数优于成员函数](https://harttle.land/2015/08/20/effective-cpp-23.html)
 + [Item 24 : 用非成员函数来支持所有元的类型转换](https:/harttle.land/2015/08/22/effective-cpp-24.html)

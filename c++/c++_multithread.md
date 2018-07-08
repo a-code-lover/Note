@@ -57,7 +57,7 @@ public:
 }
 X x;
 int num(10);
-//pass the reference of the object 
+//pass the reference of the object
 std::thread t(&X::do_something, &x, num);
 ```
 

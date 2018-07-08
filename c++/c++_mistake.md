@@ -28,16 +28,23 @@
 
     missing colon after a class definition, missing {} or ()
 
-+ "Warning: Comparison between signed and unsigned integer expressions": note that every warning may cause fatal error, syntax warning but logic error.  
+### (4) "Warning: Comparison between signed and unsigned integer expressions": note that every warning may cause fatal error, syntax warning but logic error
+
     for (int i = 0; i < s.size() - 1; ++i) {}  
-while s.size() equals to 0, this cause running error.  
+    while s.size() equals to 0, this cause running error.  
     for (int i = 0; (int)i < s.size() - 1; ++i) {}
 
-+ "Runtime Error:  access within null pointer of type 'struct ListNode'": access data member or function member of a null pointer.
+### (5) "Runtime Error:  access within null pointer of type 'struct ListNode'"
 
-+ "CompileError: Line 9: 'bool operator<(const ListNode*, const ListNode*)' must have an argument of class or enumerated type".
+    access data member or function member of a null pointer.
 
-+ "Runtime Error: double free or corruption (out): 0x00000000011abe70 ***" : <https://www.cnblogs.com/zhenjing/archive/2011/01/26/memory_overwrite.html>
+### (6) "CompileError: Line 9: 'bool operator<(const ListNode*, const ListNode*)' must have an argument of class or enumerated type"
+
+### (7) "Runtime Error: double free or corruption (out): 0x00000000011abe70 ***" : <https://www.cnblogs.com/zhenjing/archive/2011/01/26/memory_overwrite.html>
+
+### (8) "Runtime Error: reference binding to null pointer of type 'value_type'"
+
+    accessing to data member of null vector results in error.
 
 ## 3.project mistake
 

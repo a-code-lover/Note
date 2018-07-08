@@ -1,11 +1,12 @@
-# editting zhortcut：
+# editting shortcut：
 
-+ A：jump to the end of line，normal to insert mode 
-+ di+bracket：delete all in brackets 
++ A：jump to the end of line，normal to insert mode
++ di+bracket：delete all in brackets
 + zc/aC/zo/zO ： 当前折叠
 + zm/zr ： 所有折叠
 + [列编辑](https://www.ibm.com/developerworks/cn/linux/l-cn-vimcolumn/index.html)
 + [与系统剪切板交互](https://blog.csdn.net/zhangxiao93/article/details/53677764)
++ shift + zz: 保存退出， shift + zq: 不保存退出。
 
 ## qucik jump
 

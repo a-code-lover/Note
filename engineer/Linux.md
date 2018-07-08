@@ -18,7 +18,9 @@
   <https://www.jianshu.com/p/9d3033d1b26f>
   <https://blog.csdn.net/fang_chuan/article/details/60958329>
   <http://www.5ycode.com/article/59.html>
-
++ 以d结尾命名服务，是守护进程。以.d结尾的文件夹，保持对原有配置的兼容，同时存在.config和.config.d或者同时存在rc和rc.d。
++ init.d: 包含许多系统各种服务的启动和终止的脚本。
++ ssh经常超时断开：/etc/ssh/sshd_config配置
 
 ## 3.command
 
@@ -50,3 +52,7 @@ make clean清除编译结果。
 ### (1)Notice
 
 1) no spaces before or after equal sign when set an variable.
+
+## 6.mysql
+
+(1)mysql命令必须以分号结尾，否则不显示。

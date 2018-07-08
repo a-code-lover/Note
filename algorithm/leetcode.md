@@ -95,3 +95,9 @@ int findSubstring(string s){
 注：递归和迭代的运行时间是一样的，只是递归用到系统内存的栈，迭代使用数据结构的栈。
 
 ## all. use iterative to deal with binary tree
+
+## 121. best time to sell stocks
+
+思路： dp
+
+## 124. binary tree maximum path sum
