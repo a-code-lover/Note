@@ -47,6 +47,10 @@ make clean清除编译结果。
 
 具体的东西都在Makefile里面,只不过大部分应用程序的Makefile都是由configure脚本自动生成的,所以Makefile内容都差不多。
 
+### (3)termtosvg
+
+A Linux termimal recorder written in python that records your command lines sessions in standalone SVG animations.
+
 ## 5.shell
 
 ### (1)Notice
@@ -55,4 +59,30 @@ make clean清除编译结果。
 
 ## 6.mysql
 
-(1)mysql命令必须以分号结尾，否则不显示。
+<http://www.cnblogs.com/xiaoluo501395377/archive/2013/04/07/3003278.html>
+<https://blog.csdn.net/qq_35246620/article/details/70823903>  
+
+### 操作
+
+(1)mysql命令必须以分号结尾，否则不显示。  
+(2)mysql可以输入多个语句执行。
+(3)入门书籍：《mysql必知必会》。
+(4)多数DBMS使用+或||实现拼接，mysql使用concat()函数实现。
+(5)使用like或regexp匹配。
+(6)Trim(), LTrim(), RTrim()去掉空格。
+(7)sql函数：字符串，数值，日期时间，系统信息。
+(8)Soundex()竟然支持类似发音匹配。
+(9)aggregate函。
+(10)数据分组：group by和having。
+(11)字句顺序：select, from, where, group by, having, order by, limit.
+(12)子查询。逐渐增加。
+(13)联结：关系。
+
+### 原理
+
+## 7.gdb
+
+<https://blog.csdn.net/analogous_love/article/details/53333894>
+<http://wiki.ubuntu.org.cn/%E7%94%A8GDB%E8%B0%83%E8%AF%95%E7%A8%8B%E5%BA%8F>
+[cdgb 0.7.0](https://cgdb.github.io/)
+<https://zhuanlan.zhihu.com/p/32843449>

@@ -78,3 +78,7 @@ vector<int> inorderTraversal(TreeNode* root) {
         cur = cur->right;
     }
 }
+
+int main() {
+    return 0;
+}

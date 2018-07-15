@@ -46,6 +46,21 @@ void assert( int expression );
 
 ### (3)souce-to-source compiler: facebook/hip hop for PHP(translate php into c++)
 
-## 4.gcc,clang,msvc
+## 4.编译器
 
-## 项目打包工具，编译工具，调试工具，代码格式化工具，
+python解释器：cpython, ipython, pypy.
+
+### (1)GCC(G++)
+
+### (2)LLVM(Clang)
+
+<http://www.aosabook.org/en/llvm.html>  
+<http://llvm.org/docs/tutorial/LangImpl05.html>
+> a typical Three-Phase Compiler:  
+> source -->[front end] [optimizer] [backend] -->machine code
+
+1)DraggonEgg是一个GCC插件，使得GCC能够使用LLVM优化器和代码生成器来取代GCC自己的优化器和代码生成器。
+
+### (3)MSVC(vc++)
+
+## 5.项目打包工具，编译工具，调试工具，代码格式化工具，

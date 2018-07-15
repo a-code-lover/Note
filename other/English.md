@@ -12,6 +12,7 @@
 + contiguous: 邻近的anagrams
 + continuous and discrete random variables    categorical 分类的
 + diagonal: 对角线
++ discriminate: 辨别
 + impute missing data 填补缺失数据
 + increment/decrement: 增量/减量
 + instantiate
@@ -31,9 +32,11 @@
 + prime number: 质数
 + pseudo-random number 伪随机数
 + prefix: 字首
++ scalar: 纯量，只有大小没有方向的量
 + shrink the scope:缩减范围
 + verbose: detailed or prolix
 + volatile: 易变的，不稳定的，易爆的
++ wildcard: 通配符
 
 ## sign
 

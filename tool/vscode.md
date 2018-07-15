@@ -34,6 +34,8 @@
 
 #### settting sync
 
+<https://www.cnblogs.com/ashidamana/p/6761085.html>
+
 + shift + alt + u/d : 同步
 
 ### 3.配置c++
