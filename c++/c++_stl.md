@@ -120,3 +120,7 @@ struct iterator {
 ### (5)queue
 
 ### (6)priority_queue
+
+### 思考
+
+1)vector和list分别在什么情况下使用？

@@ -85,5 +85,9 @@
   + <http://blog.51cto.com/boyishachang/1284520>
   + <https://songlee24.github.io/2014/09/02/cpp-virtual-table/>
 + [断言与静态断言](http://deltamaster.is-programmer.com/posts/29649.html)
+  + <https://blog.csdn.net/makenothing/article/details/23555073>
 + [c++11新特性](http://blog.guoyb.com/tags/C-11/)
 + queue pop()操作：对象销毁？内存释放？
++ c++和c语言的差别？
++ [c++自由存储区是否等同于堆？](http://www.qingpingshan.com/rjbc/cyy/35186.html)
++ stl中的sort()是使用快排(qsort())吗？稳定排序使用什么（stable_sort）？(TimSort in python)

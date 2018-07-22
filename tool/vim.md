@@ -7,6 +7,7 @@
 + [列编辑](https://www.ibm.com/developerworks/cn/linux/l-cn-vimcolumn/index.html)
 + [与系统剪切板交互](https://blog.csdn.net/zhangxiao93/article/details/53677764)
 + shift + zz: 保存退出， shift + zq: 不保存退出。
++ ctrl + ; ： 粘贴板
 
 ## qucik jump
 

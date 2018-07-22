@@ -5,6 +5,7 @@
 + [tools quick tutorial](http://linuxtools-rst.readthedocs.io/zh_CN/latest/base/01_use_man.html)
 + [common linux command](https://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 + [all linux command](http://www.runoob.com/linux/linux-command-manual.html)
++ [terminal shortcut](https://www.cnblogs.com/cobbliu/p/3629772.html)
 
 ## 2.basic
 
@@ -20,7 +21,9 @@
   <http://www.5ycode.com/article/59.html>
 + 以d结尾命名服务，是守护进程。以.d结尾的文件夹，保持对原有配置的兼容，同时存在.config和.config.d或者同时存在rc和rc.d。
 + init.d: 包含许多系统各种服务的启动和终止的脚本。
-+ ssh经常超时断开：/etc/ssh/sshd_config配置
++ ssh经常超时断开：/etc/ssh/sshd_config配置。
++ cat /etc/services 查看所有服务的网络端口号。
++ telnet 127.0.0.1 port 查看端口是否被占用。
 
 ## 3.command
 
@@ -51,7 +54,7 @@ make clean清除编译结果。
 
 A Linux termimal recorder written in python that records your command lines sessions in standalone SVG animations.
 
-## 5.shell
+## 5.shell script
 
 ### (1)Notice
 

@@ -1,26 +1,6 @@
 # tools extension of c++ development
 
-## 1.Basic API
-
-### (1)namespace std
-
-+ std::ref(variable) --- 返回一个引用包装器
-+ std::tuple make_tuple get std::pair
-+ std::unique_ptr<>
-+ std::move --- std::thread只能用move不能用copy
-
-### (2)assert()
-
-若expression为0，则调用stderr打印一条错误信息，通过abort终止程序。仅在debug模式有效，可以关掉再release.
-
-```c++
-#include <assert.h>
-void assert( int expression );
-```
-
-### (3)[new, ::operator new, ::operator delete](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
-
-<font color=#ff1111> 注：c++的new handle机制。</font>
+## 1.Basic
 
 ## 2.G++
 
@@ -64,3 +44,7 @@ python解释器：cpython, ipython, pypy.
 ### (3)MSVC(vc++)
 
 ## 5.项目打包工具，编译工具，调试工具，代码格式化工具，
+
+## 6.skia开源二位图形库
+
+Chrome,Firefox,Android等众多产品的图形渲染引擎。

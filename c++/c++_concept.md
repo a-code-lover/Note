@@ -372,3 +372,17 @@ class c(T*) {...}; //这个特化版本仅适用T为原生指标
 
 + <http://blog.sina.com.cn/s/blog_4a0824490102x4hv.html>
 + <http://blog.guoyb.com/2016/09/10/cpp11-9/>
+
+## 29.Exception异常机制是c++区别于c的一个重要方面
+
+<https://blog.csdn.net/zhangyifei216/article/details/50410314>
+[堆栈解退](https://blog.csdn.net/daye704/article/details/50699215)
+<https://senitco.github.io/2017/10/15/cplusplus-exception/>
+
+## 30.function template的类型推导机制
+
+## 31.placement new()
+
+<https://blog.csdn.net/zhangxinrun/article/details/5940019>
+
+## 32.decltype()
