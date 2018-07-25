@@ -21,6 +21,8 @@
 + alt + num : 标签切换 ctrl + pageup/pagedown
 + ctrl + p : 快速打开最近打开的文件
 + ctrl + k,ctrl + s : 查看所有快捷键
++ ctrl + p, right arrow : open muliple files
++ ctrl + k, z : zen mode
 
 ### (2)code
 

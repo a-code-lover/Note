@@ -123,4 +123,85 @@ struct iterator {
 
 ### 思考
 
-1)vector和list分别在什么情况下使用？
+1)vector和list分别在什么情况下使用？  
+2)为什么set和map的实现使用RB-tree？RB-tree对于AVL-tree的优势在哪？
+<https://blog.csdn.net/mmshixing/article/details/51692892>
+
+## 4.源码：关联式容器Associative Containers
+
+### (1)RB_tree
+
+### (2)set
+
+### (3)map
+
+### (4)multiset
+
+### (5)multimap
+
+## 5.源码：算法Algorithm
+
+## 6.源码：函数对象Function Class
+
+    仿函数的作用主要在哪？STL所提供的各种算法，往往有两个版本，其中一个版本是最常用的某种运算，第二个版本表现为泛化的过程，允许用户“以template参数来指定所要采用的策略“。如果要将”操作“作为算法的参数，唯一的方法是将该”操作“设计为一个函数，再将函数的指针当作算法的一个参数;或者就该”操作“设计为一个所谓的函数对象，并将该对象作为算法的一个参数。
+    那么为什么不使用函数指针呢？原因在于函数指针不能满足STL对于抽象性的要求，也不能满足软件的要求（函数指针无法和STL其他组件搭配，产生更灵活的变化）。
+    函数对象必须自定义function call运算符(operator()),拥有这样的运算符后，我们就可以在仿函数的对象后面加上一对小括号，以此调用函数对象定义的operator()。
+    若以操作数的个数分，可分为一元和二元，若以功能分，可分为Arithmetic, Rational, Logical。头文件<functional>。
+    一般而言，不会有人单独运用这些功能机器简单的函数对象，主要用途是搭配STL算法。
+
+### unary_function
+
+```c++
+template <class Arg, class Result>
+struct unary_function {
+    typedef Arg argument_type;
+    typedef Result result_type;
+}
+```
+
+### binary_function
+
+### 6个算术函数对象
+
++ plus\<T>
++ minus\<T>
++ multiplies\<T>
++ divides\<T>
++ modulus\<T>
++ negation\<T>
+
+### 6个运算函数对象
+
++ equal_to\<T>
++ not_equal_to\<T>
++ greater\<T>
++ greater_equal\<T>
++ less\<T>
++ less_equal\<T>
+
+### 3个逻辑运算函数对象
+
++ logical_and\<T>
++ logical_or\<T>
++ logical_not\<T>
+
+## 7.源码：配接器Adapter
+
+### container adapters
+
++ queue
++ stack
++ priority_queue
+
+### iterator adapters
+
++ insert iterators
++ reverse iterators
++ iostream iterators
+
+注：所谓迭代器配接器很少以迭代器为直接对象，所谓对迭代器的修饰只是一种观念上的改变。
+
+### function adapters(超灵活，数量最庞大)
+
+    function adapters的价值在于，通过他们之间的绑定，组合，修饰能力，几乎可以无限制地创造出各种表达式，搭配STL算法一起使用。
+    function adapters提供了一系列辅助函数。

@@ -72,3 +72,17 @@ set: only definition of ++ and --, but not + 1.
 ## 3. error
 
 ### (1)[Segmentation Fault: ](http://silencewt.github.io/2015/05/11/Segmentation-Fault%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%E6%80%BB%E7%BB%93/)
+
+## 4. 输入/输出运算符
+
+### \<ios\>
+
+boolalpha, showbase, showpoint, showpos, skipws, uppercase, unitbuf, internal/left/right, dex/hex/oct, fixed/scientific
+
+### \<ostream\>
+
+ends, flush, endl
+
+### \<iomanip\>
+
+setiosflags, setfill, setw, setprecision, setbase

@@ -88,7 +88,8 @@
   + <https://blog.csdn.net/makenothing/article/details/23555073>
 + [c++11新特性](http://blog.guoyb.com/tags/C-11/)
 + queue pop()操作：对象销毁？内存释放？
-+ c++和c语言的差别？
++ c++和c语言的差别？  
+  + 多范式，exception，重载（自定义行为），各种机制，模板
 + [c++自由存储区是否等同于堆？](http://www.qingpingshan.com/rjbc/cyy/35186.html)
 + stl中的sort()是使用快排(qsort())吗？稳定排序使用什么（stable_sort）？(TimSort in python)
 + 实现一个list的快排？
