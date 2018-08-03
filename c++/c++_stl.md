@@ -195,13 +195,19 @@ struct unary_function {
 
 ### iterator adapters
 
-+ insert iterators
-+ reverse iterators
-+ iostream iterators
++ insert iterators(底层为容器)
++ reverse iterators(底层为iterator)
++ iostream iterators(底层为iostream)
 
 注：所谓迭代器配接器很少以迭代器为直接对象，所谓对迭代器的修饰只是一种观念上的改变。
 
 ### function adapters(超灵活，数量最庞大)
 
     function adapters的价值在于，通过他们之间的绑定，组合，修饰能力，几乎可以无限制地创造出各种表达式，搭配STL算法一起使用。
-    function adapters提供了一系列辅助函数。
+    function adapters提供了一系列辅助函数。STL提供了众多的配接器，使”一般函数“和”成员函数“得以无缝地与其他配接器和算法结合起来。
+    所有期望获得配接能力的组件，本身必须是可配接的。换句话说，一元仿函数必须继承自unary_function, 二元仿函数必须继承自binary_function, 成员函数必须经过mem_fun处理过，一般函数必须经过ptr_fun处理过。
+
++ bind1st(const Op& op, const T& x), bind2nd();
++ not1(const Pred& pred), not2();
++ ptr_fun(Result(*fp)(Arg)), ptr_fun(Result(*fp)(Arg1, Arg2));
++ mem_fun(S (T::*f)()), mem_fun(S (T::*f)() const), mem_fun_ref(S (T::*f)()), mem_fun_ref(S (T::*f)() const) 二元的重载了。

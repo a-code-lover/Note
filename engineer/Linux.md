@@ -24,6 +24,9 @@
 + ssh经常超时断开：/etc/ssh/sshd_config配置。
 + cat /etc/services 查看所有服务的网络端口号。
 + telnet 127.0.0.1 port 查看端口是否被占用。
++ [切换root用户](https://www.cnblogs.com/weiweiqiao99/archive/2010/11/10/1873761.html)
++ bc : 计算器
++ ctrl + d : terminal退出  ctrl + c
 
 ## 3.command
 
@@ -64,6 +67,9 @@ A Linux termimal recorder written in python that records your command lines sess
 
 <http://www.cnblogs.com/xiaoluo501395377/archive/2013/04/07/3003278.html>
 <https://blog.csdn.net/qq_35246620/article/details/70823903>  
+[new installation, log in as root user](https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost)
+[remote connection](https://devdocs.magento.com/guides/v2.0/install-gde/prereq/mysql_remote.html)
+[remote connection](https://www.cnblogs.com/XL-Liang/archive/2012/05/03/2481310.html)
 
 ### 操作
 

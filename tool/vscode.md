@@ -23,6 +23,8 @@
 + ctrl + k,ctrl + s : 查看所有快捷键
 + ctrl + p, right arrow : open muliple files
 + ctrl + k, z : zen mode
++ ctrl + ` : terminal / ctrl + shift + y : console;
++ ctrl + l : clear terminal
 
 ### (2)code
 

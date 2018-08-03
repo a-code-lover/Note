@@ -5,6 +5,8 @@
 ## 2.G++
 
 [reference : Linux下gcc和gdb](http://blog.51cto.com/goodhx/1734760)
+[Linux下静态库和动态库的链接](https://blog.csdn.net/benpaobagzb/article/details/51364005)
+<https://blog.csdn.net/surgewong/article/details/39236707>
 
 + g++ -E *.cpp (预处理，生成.i/.ii文件，预处理起cpp)
 + g++ -S *.cpp (生成.s汇编文件，编辑器egcs,用编辑器打开看到汇编指令)
@@ -48,3 +50,7 @@ python解释器：cpython, ipython, pypy.
 ## 6.skia开源二位图形库
 
 Chrome,Firefox,Android等众多产品的图形渲染引擎。
+
+## 7.Cryto++加密库
+
+<http://www.cppblog.com/ArthasLee/archive/2010/12/01/135186.html>

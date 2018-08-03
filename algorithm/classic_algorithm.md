@@ -20,7 +20,7 @@
 
 + Run-Length Encoding
 + Burrows-Wheeler Transform
-+ Shannonj-Fano Encoding
++ Shannon-Fano Encoding
 + Huffman Encoding
 + Arithmetic Encoding
 
