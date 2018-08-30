@@ -32,6 +32,14 @@
 
 + [ls -a -l -F -s -t -S / tree -L n](https://blog.csdn.net/xuehuafeiwu123/article/details/53817161)
 + shift + pageup/pagedown : terminal 翻页
++ nmcli / nmcli device show : 网络管理 (route -n, traceroute, netstat -r, )
++ uname
++ sudo apt install mesa-utils, glxinfo | grep rendering
++ ctrl + alt + arrow up/down : swithch workspace
++ **文件夹下** alt + home : 到主文件夹， ctrl + h : 显示隐藏开关， f9 ： file侧边栏， alt + arrow ： 前进后退， ctrl + t : 新建标签， ctrl + shift + n : 新建文件夹，
++ alt + ` : 在同一程序不同窗口切换
++ win + launcher + num切换， + shift 新建
+        
 
 ## 4.tool
 

@@ -93,3 +93,9 @@ setiosflags, setfill, setw, setprecision, setbase
 
 > The ISO standards specify that "all library entities are defined within namespace std." This includes namespaces nested within namespace std, such as namespace std::chrono.  
 > P.S. The ISO standard is a detailed technical document intended primarily for people writing C++ compilers and standard library implementations.
+
+## 6.stream
+
+### istringstream
+
+
