@@ -329,6 +329,7 @@ Resource acquisition is auquisition.
 ### (4)裸指针
 
 c/c++的原始指针，与智能指针对应。
+指针和变量一样，也是有地址的，只不过变量的值被解释成一个值，而指针的值被解释成一个地址。
 
 ## 22.volatile
 
