@@ -46,6 +46,8 @@
 
     accessing to data member of null vector results in error.
 
+### (9) `long long = INT_MAX + 1;` `long long = (long long)INT_MAX + 1;`
+
 ## 3.project mistake
 
 "error C3646:未知重写声明符"：[循环引用，顺序错误，语法错误](https://blog.csdn.net/biubiu741/article/details/54958861)

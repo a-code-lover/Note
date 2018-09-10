@@ -189,7 +189,7 @@ y = (int) x;    // c-like cast notation
 
 ## 17.lambda
 
-1. Capture 子句（在 C++ 规范中也称为 lambda 引导。）
+1. Capture 子句（在 C++ 规范中也称为 lambda 引导。）<https://blog.csdn.net/zh379835552/article/details/19542181>
 2. 参数列表（可选）。 （也称为 lambda 声明符)
 3. 可变规范（可选）。
 4. 异常规范（可选）。
@@ -376,8 +376,8 @@ class c(T*) {...}; //这个特化版本仅适用T为原生指标
 
 ## 29.Exception异常机制是c++区别于c的一个重要方面
 
-<https://blog.csdn.net/zhangyifei216/article/details/50410314>
-[堆栈解退](https://blog.csdn.net/daye704/article/details/50699215)
+<https://blog.csdn.net/zhangyifei216/article/details/50410314>  
+[堆栈解退](https://blog.csdn.net/daye704/article/details/50699215)  
 <https://senitco.github.io/2017/10/15/cplusplus-exception/>
 
 ## 30.function template的类型推导机制
