@@ -8,6 +8,7 @@
 + std::tuple make_tuple get std::pair
 + std::unique_ptr<>
 + std::move --- std::thread只能用move不能用copy
++ std::setpercision(n)和cout.precision(n)效果一样，一个是流对象函数一个是操纵函数。
 
 ### (2)assert()
 

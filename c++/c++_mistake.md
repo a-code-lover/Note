@@ -14,6 +14,8 @@
 
 + be concentrated, mistake of a num or letter can cause sevious consumption of debugging time.
 
++ 变量规范必须初始化，默认初始化会出现问题，如果指针不初始化，那么判断``root == NULL``会为否，但此时root是不可访问的。
+
 ## 2.leetcode mistake
 
 ### (1)"variable length array bound evaluates to non-positive value 0"
@@ -46,13 +48,20 @@
 
     accessing to data member of null vector results in error.
 
-### (9) `long long = INT_MAX + 1;` `long long = (long long)INT_MAX + 1;`
+### (9)
+
+如果int变量取值INT_MAX那么递增会出错：
+`long long i = INT_MAX + 1;` `long long i = (long long)INT_MAX + 1;` `int i = INT_MAX + 1;`
+永远不会退出循环：
+``for (size_t i = nums.size() - 1; i >= 0; i--) {}``
 
 ## 3.project mistake
 
-"error C3646:未知重写声明符"：[循环引用，顺序错误，语法错误](https://blog.csdn.net/biubiu741/article/details/54958861)
+&emsp;&emsp;"error C3646:未知重写声明符"：[循环引用，顺序错误，语法错误](https://blog.csdn.net/biubiu741/article/details/54958861)
 
 ## 4.使用临时变量构建链表，返回临时变量地址。
+
+&emsp;&emsp; 指针在内存中会分配一个四个字节的内存空间，**内存中的内容是指针所指的地址**，为NULL则存0x00。**函数拷贝指针分配临时四个字节，拷的是指针所指的地址**。
 
 ```c++
 //merge k sorted lists
@@ -80,5 +89,15 @@ public:
         }
         return head.next;
     }
-};
+}；
+```
+
+```c++
+Node* foo(Node* root, ···) {
+    if (root == NULL) {
+        root = new Node();  //new 的空间要手动销毁
+        return root;
+    }
+    ···
+}
 ```

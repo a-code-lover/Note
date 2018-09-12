@@ -165,13 +165,13 @@ baz = MyClass();         // move assignment
 
 <http://www.cplusplus.com/doc/tutorial/polymorphism/>  
 <https://harttle.land/2015/06/28/cpp-polymorphism.html>
->**One of the key features of class inheritance is that a pointer to a derived class is type-compatible with a pointer to its base class. Polymorphism is the art of taking advantage of this simple but powerful and versatile feature.**
+>One of the key features of class inheritance is that a pointer to a derived class is type-compatible with a pointer to its base class. Polymorphism is the art of taking advantage of this simple but powerful and versatile feature.
 >
->**A virtual member is a member function that can be redefined in a derived class, while preserving its calling properties through references.**
+>A virtual member is a member function that can be redefined in a derived class, while preserving its calling properties through references.
 >
->**A class that declares or inherits a virtual function is called a polymorphic class. Classes that contain at least one pure virtual function are known as abstract base classes. Virtual members and abstract classes grant C++ polymorphic characteristics, most useful for object-oriented projects.**
+>A class that declares or inherits a virtual function is called a polymorphic class. Classes that contain at least one pure virtual function are known as abstract base classes. Virtual members and abstract classes grant C++ polymorphic characteristics, most useful for object-oriented projects.
 >
->**An abstract base class is not totally useless. It can be used to create pointers to it, and take advantage of all its polymorphic abilities. And can actually be dereferenced when pointing to objects of derived (non-abstract) classes.**
+>An abstract base class is not totally useless. It can be used to create pointers to it, and take advantage of all its polymorphic abilities. And can actually be dereferenced when pointing to objects of derived (non-abstract) classes.
 
 ## [15.type casting]
 
@@ -329,7 +329,7 @@ Resource acquisition is auquisition.
 ### (4)裸指针
 
 c/c++的原始指针，与智能指针对应。
-指针和变量一样，也是有地址的，只不过变量的值被解释成一个值，而指针的值被解释成一个地址。
+指针和变量一样，也是有地址的，只不过变量的值被解释成一个值，而指针的值被解释成一个地址。实现树的题目可以训练指针的使用。
 
 ## 22.volatile
 

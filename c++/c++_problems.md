@@ -94,3 +94,4 @@
 + stl中的sort()是使用快排(qsort())吗？稳定排序使用什么（stable_sort）？(TimSort in python)
 + 实现一个list的快排？
 + '\0'为ARSCII码0，在内存中为全零，字符串为NULL表示未分配内存，字符串为""已分配内存为指定内容。
++ cout, cerr, clog的差别？
