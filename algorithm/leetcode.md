@@ -103,3 +103,7 @@ int findSubstring(string s){
 ## 124. binary tree maximum path sum
 
 ## 134. gas station can complete circle
+
+## 最小圆覆盖
+
+平面上有n个点，给定n个点的坐标，试找一个半径最小的圆，将n个点全部包围，点可以在圆上, 这个圆叫最小包围圆, 求出求出这个圆的圆心坐标和半径。

@@ -79,6 +79,35 @@ vector<int> inorderTraversal(TreeNode* root) {
     }
 }
 
+//quick_sort with c++
+template<class ForwardIt, class UnaryPredicate>
+ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
+{
+    first = std::find_if_not(first, last, p);
+    if (first == last) return first;
+ 
+    for (ForwardIt i = std::next(first); i != last; ++i) {
+        if (p(*i)) {
+            std::iter_swap(i, first);
+            ++first;
+        }
+    }
+    return first;
+}
+
+template <class ForwardIt>
+void quicksort(ForwardIt first, ForwardIt last)
+{
+    if(first == last) return;
+    auto pivot = *std::next(first, std::distance(first,last)/2);
+    ForwardIt middle1 = std::partition(first, last, 
+                            [pivot](const auto& em){ return em < pivot; });
+    ForwardIt middle2 = std::partition(middle1, last, 
+                            [pivot](const auto& em){ return !(pivot < em); });
+    quicksort(first, middle1);
+    quicksort(middle2, last);
+}
+
 int main() {
     return 0;
 }

@@ -25,6 +25,7 @@
 + ctrl + k, z : zen mode
 + ctrl + ` : terminal / ctrl + shift + y : console;
 + ctrl + l : clear terminal
++ ctrl + shift + e : switch between explorer and editor
 
 ### (2)code
 
@@ -43,6 +44,8 @@
 + shift + alt + u/d : 同步
 
 ## 3.编译环境
+
+Mind: the folder .vscode must be put together with src files.
 
 ### c++
 
