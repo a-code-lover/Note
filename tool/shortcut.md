@@ -9,3 +9,27 @@
 
 + win + a
 + win + m
+
+## eclipse
+
++ 括号跳转： c-s-p
++ 折叠： 行码处右键，选择折叠
++ F3/c-click: 定义跳转，alt-arrowleft：返回
++ c-s-F6：tab切换 c-F6 c-e：下拉列表
++ c-s-F8：窗口切换
++ c-s-L：查看快捷键列表
++ c-F11：运行
++ 输入sys,a-/辅助输入：快速输出
++ c-s-arrowup/down：切换上下成员
++ c-arrowup/down：上下滚动
++ c-s-f：格式化
++ c-d：删除行
++ 双击左括号右侧选中括号内容
++ c-m：当前视图最大化
++ c-o：显示大纲
++ alt-up/down：行移动
++ c-/：当行注释 c-s-/：块注释 c-s-C a-s-J：添加文档注释说明
++ c-q：上一编辑位置
++ c-k：定位选中词的下一个
++ a-s-A：列模式
+

@@ -41,6 +41,7 @@
 + alt + d == F6
 + alt + space
 + shift + 右击 : 当前文件夹打开power shell
++ c-a-arrow：旋转桌面
 
 ## 6.批处理
 

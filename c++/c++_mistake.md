@@ -55,6 +55,33 @@
 永远不会退出循环：
 ``for (size_t i = nums.size() - 1; i >= 0; i--) {}``
 
+### (10) 实现vector的`next_permutation()`接口，在next_per参数中缺少引用&导致错误。
+
+```c++
+bool next_per(vector<int> &nums) { //如果缺少&号，程序死循环
+    int i = nums.size() - 1, j = nums.size() - 1;
+    for (; i > 0 && nums[i] < nums[i - 1]; i--);
+    if (i == 0) return false;
+    for (; j >= 0 && nums[j] < nums[i - 1]; j--);
+    swap(nums[i - 1], nums[j]);
+    reverse(nums.begin() + i, nums.end());
+    //for (auto elem : nums) cout << elem << " ";
+    //cout << endl;
+    return true;
+}
+
+vector<vector<int>> permute(vector<int>& nums) {
+    vector<vector<int>> res;
+    std::sort(nums.begin(), nums.end());
+    do {
+        res.push_back(nums);
+        for (auto elem : nums) cout << elem << " ";
+        cout << endl;
+    } while(next_per(nums));
+    return res;
+}
+```
+
 ## 3.project mistake
 
 &emsp;&emsp;"error C3646:未知重写声明符"：[循环引用，顺序错误，语法错误](https://blog.csdn.net/biubiu741/article/details/54958861)
