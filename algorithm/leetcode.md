@@ -10,9 +10,22 @@ int x=[](){
 }();
 ```
 
-## 4. median of two sorted array
+## summary
 
-<https://blog.csdn.net/yutianzuijin/article/details/11499917>
+1. [二分查找](https://octman.com/blog/2013-09-27-binary-search-and-variants/)
+
+2. [排列组合](https://octman.com/blog/2013-10-10-permutation/)
+
+3. [树遍历查找](https://octman.com/blog/2013-10-20-note-tree-traverse-nonrecursive/)
+
+4. 字符串匹配
+
+5. [随机数问题](https://octman.com/blog/2013-10-20-interview-questions-random-numbers/)
+
+## 4. median of two sorted array(二分查找)
+
++ <https://octman.com/blog/2013-09-27-binary-search-and-variants/>  
++ <https://blog.csdn.net/yutianzuijin/article/details/11499917>
 
 ## 5.LPS
 
@@ -48,6 +61,8 @@ int x=[](){
 思路：prime number
 
 ## all. 排列组合问题
+
+<https://octman.com/blog/2013-10-10-permutation/>
 
 ## all. substring 问题
 

@@ -25,7 +25,7 @@ class Linklist {
 
 };
 
-//KMP
+// KMP
 vector<int> kmpProcess(string s) {
     int size = s.size();
     vector<int> lps(size, 0);
@@ -55,7 +55,7 @@ int strstr_kmp(string haystack, string needle) {
     return -1;
 }
 
-//iterativer for binart tree traverssal
+// iterativer for binart tree traverssal
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -79,7 +79,7 @@ vector<int> inorderTraversal(TreeNode* root) {
     }
 }
 
-//quick_sort with c++
+// quick_sort with c++
 template<class ForwardIt, class UnaryPredicate>
 ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
 {
@@ -108,6 +108,85 @@ void quicksort(ForwardIt first, ForwardIt last)
     quicksort(middle2, last);
 }
 
+// Summary: next_permutaion for array without or without duplication.
+// Parameters:
+// Return:
+bool next_permutation(vector<int> &nums) {
+	int i = nums.size() - 1, j = nums.size() - 1;
+	for (; i > 0 && nums[i] <= nums[i - 1]; i--);
+	if (i == 0) return false;
+	for (; j >= 0 && nums[j] <= nums[i - 1]; j--);
+	swap(nums[i - 1], nums[j]);
+	reverse(nums.begin() + i, nums.end());
+	//for (auto elem : nums) cout << elem << " ";
+	//cout << endl;
+	return true;
+}
+
+// Summary: recursion for all subsets of combination.
+// Parameters:
+// Return:
+void all_subset(vector<vector<int>> &res, vector<int> nums, vector<int> &arr, size_t i) {
+	if (i == arr.size()) {
+		res.push_back(nums);
+		return;
+	}
+	all_subset(res, nums, arr, i + 1);
+	nums.push_back(arr[i]);
+	all_subset(res, nums, arr, i + 1);
+}
+
+// Summary: recursion for permutation without duplication.
+// Parameters:
+// Return:
+// Reference: https://octman.com/blog/2013-10-10-permutation/
+void permutation(vector<vector<int>> &res, vector<int> &arr, size_t i) {
+	if (i == arr.size() - 1) {
+		res.push_back(arr);
+	}
+	for (size_t j = i; j < arr.size(); j++) {
+		swap(arr[i], arr[j]);
+		permutation(res, arr, i + 1);
+		swap(arr[i], arr[j]);
+	}
+}
+
+// Summary: Recusion for permutation with duplication.
+// Parameters:
+// Return:
+void permutationUnique(vector<vector<int>> &res, vector<int> &arr, size_t i) {
+	if (i == arr.size() - 1) {
+		res.push_back(arr);
+	}
+
+	auto checkSwapvalid = [=](const vector<int> arr, int idxBegin, int idxEnd)->bool {
+		for (int i = idxBegin; i < idxEnd; i++) {
+			if (arr[i] == arr[idxEnd]) {
+				return false;
+			}
+		}
+		return true;
+	};
+
+	for (size_t j = i; j < arr.size(); j++) {
+		if (checkSwapvalid(arr, i, j)) {
+			swap(arr[i], arr[j]);
+			permutation(res, arr, i + 1);
+			swap(arr[i], arr[j]);
+		}		
+	}
+}
+
 int main() {
+    vector<int> nums = {1,1,2};
+
+    int i = 5;
+    while (next_permutation(nums) && i--) {
+        for (auto elem : nums)
+            cout << elem << ends;
+        cout << endl;
+    }
+    cin.get();
+    cin.get();
     return 0;
 }

@@ -4,8 +4,14 @@
 
 + <http://www.cplusplus.com/doc/tutorial/>
 + [effective c++中文翻译版](https://wizardforcel.gitbooks.io/effective-cpp/content/)
++ [代码规范](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/)
++ [注释规范统一](https://blog.csdn.net/guyue35/article/details/46775211)
 
-1.NULL:macro definition of a null pointer, in c++11 standard, we use nullptr. ``#define NULL 0`` or ``#define NULL (void*)0`` , in fact the 0 has different meanings depending on the context in which its used.
+## 1.etc
+
+1. NULL:macro definition of a null pointer, in c++11 standard, we use nullptr. ``#define NULL 0`` or ``#define NULL (void*)0`` , in fact the 0 has different meanings depending on the context in which its used.
+
+2. 正则表达式和类的{}要加分号。
 
 ## 2.class initialization
 

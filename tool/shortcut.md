@@ -1,5 +1,10 @@
 # shortcut
 
+## etc
+
++ A-a: 微信截屏
++ C-pageup/down：切换标签页通用快捷键
+
 ## vimium
 
 + gu：跳转到父页面（比如<http://www.douban.com/group/vim/>，输入后跳转到父页面即<http://www.douban.com/group/>，所以不同于H的快捷键是回到上个历史页面）
@@ -32,4 +37,5 @@
 + c-q：上一编辑位置
 + c-k：定位选中词的下一个
 + a-s-A：列模式
++ S-enter：新建一行
 

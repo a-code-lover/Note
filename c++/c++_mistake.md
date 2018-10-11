@@ -26,25 +26,25 @@
 
     func(i++)+func1(i),the operation order of two function is undefined, so.
 
-### (3) "CompileError: expected unqualified -id before string constant"
+### (3)"CompileError: expected unqualified -id before string constant"
 
     missing colon after a class definition, missing {} or ()
 
-### (4) "Warning: Comparison between signed and unsigned integer expressions": note that every warning may cause fatal error, syntax warning but logic error
+### (4)"Warning: Comparison between signed and unsigned integer expressions": note that every warning may cause fatal error, syntax warning but logic error
 
     for (int i = 0; i < s.size() - 1; ++i) {}  
     while s.size() equals to 0, this cause running error.  
     for (int i = 0; (int)i < s.size() - 1; ++i) {}
 
-### (5) "Runtime Error:  access within null pointer of type 'struct ListNode'"
+### (5)"Runtime Error:  access within null pointer of type 'struct ListNode'"
 
     access data member or function member of a null pointer.
 
-### (6) "CompileError: Line 9: 'bool operator<(const ListNode*, const ListNode*)' must have an argument of class or enumerated type"
+### (6)"CompileError: Line 9: 'bool operator<(const ListNode*, const ListNode*)' must have an argument of class or enumerated type"
 
-### (7) "Runtime Error: double free or corruption (out): 0x00000000011abe70 ***" : <https://www.cnblogs.com/zhenjing/archive/2011/01/26/memory_overwrite.html>
+### (7)"Runtime Error: double free or corruption (out): 0x00000000011abe70 ***" : <https://www.cnblogs.com/zhenjing/archive/2011/01/26/memory_overwrite.html>
 
-### (8) "Runtime Error: reference binding to null pointer of type 'value_type'"
+### (8)"Runtime Error: reference binding to null pointer of type 'value_type'"
 
     accessing to data member of null vector results in error.
 
@@ -55,12 +55,12 @@
 永远不会退出循环：
 ``for (size_t i = nums.size() - 1; i >= 0; i--) {}``
 
-### (10) 实现vector的`next_permutation()`接口，在next_per参数中缺少引用&导致错误。
+### (10)实现vector的`next_permutation()`接口，在next_per参数中缺少引用&导致错误。
 
 ```c++
 bool next_per(vector<int> &nums) { //如果缺少&号，程序死循环
     int i = nums.size() - 1, j = nums.size() - 1;
-    for (; i > 0 && nums[i] < nums[i - 1]; i--);
+    for (; i > 0 && nums[i] < nums[i - 1]; i--); //注意有分号和没分号的差别
     if (i == 0) return false;
     for (; j >= 0 && nums[j] < nums[i - 1]; j--);
     swap(nums[i - 1], nums[j]);
@@ -81,6 +81,8 @@ vector<vector<int>> permute(vector<int>& nums) {
     return res;
 }
 ```
+
+### (11)数据集合(vector, string)动态变化时，迭代器begin(),end()失效，size()的值变化。
 
 ## 3.project mistake
 

@@ -8,6 +8,10 @@ Reference:
 
 2. `length` `length()` `size()`. `length`属性针对数组，`length()`针对字符串string，`size()`针对泛型集合。
 
+3. `List lt;` 会报错 `List lt = new ArrayList();` 则不会报错。自定义对象如果不初始化，再访问时报错`java.lang.NullPointerException`。
+
+4. 用`==`比较字符串实质是比较地址，永远不相等，应该使用`equals()`方法。
+
 ## data structure
 
 ### arraylist

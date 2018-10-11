@@ -99,4 +99,16 @@ setiosflags, setfill, setw, setprecision, setbase
 
 ### istringstream
 
+## 7.rand随机数
 
+```c++
+srand(time(0));  //将srand放在循环外避免每次产生的随机数一样。
+vector<int> shuffle() {
+    vector<int> result(nums);
+    for (int i = 0;i < result.size();i++) {
+        int pos = rand()%(result.size()-i);
+        swap(result[i+pos], result[i]);
+    }
+    return result;
+}
+```

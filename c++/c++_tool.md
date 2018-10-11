@@ -45,14 +45,25 @@ python解释器：cpython, ipython, pypy.
 
 ### (3)MSVC(vc++)
 
-## 5.项目打包工具，编译工具，调试工具，代码格式化工具，
+## 5.GDB
+
+(1)[gdb调试打印容器](https://blog.csdn.net/xiedejun1984/article/details/5752945)
+
++ vscode是直接调用gdb。
++ (gdb) print *(myVector._M_impl._M_start)@myVector.size() 打印整个vector。
++ print *(myVector._M_impl._M_start)@N 打印第N个成员。
++ 在vscode的debug console中执行-exec p myVector查看容器模板
+
+(2)enable-pretty-printing
+
+## 6.项目打包工具，编译工具，调试工具，代码格式化工具，
 
 ### cmake工具
 
-## 6.skia开源二位图形库
+## 7.skia开源二位图形库
 
 Chrome,Firefox,Android等众多产品的图形渲染引擎。
 
-## 7.Cryto++加密库
+## 8.Cryto++加密库
 
 <http://www.cppblog.com/ArthasLee/archive/2010/12/01/135186.html>
