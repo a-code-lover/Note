@@ -4,6 +4,7 @@
 
 + A-a: 微信截屏
 + C-pageup/down：切换标签页通用快捷键
++ C-arrowup/down：上下滚动
 
 ## vimium
 

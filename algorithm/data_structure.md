@@ -53,6 +53,11 @@ int binarySearch(int arr[], int low, int high, int target) {
 
 ## 5.哈希表
 
+<https://blog.csdn.net/u013074465/article/details/45059639>  
+<https://blog.csdn.net/u013074465/article/details/40504975>
+<http://blog.jobbole.com/106733/>
+[Hash算法总结](https://www.jianshu.com/p/bf1d7eee28d0)
+
 哈希函数，冲突检测，插入实现？？？
 
 ## 6.树

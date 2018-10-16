@@ -11,7 +11,7 @@
 + [配置c++](https：//blog.csdn.net/qq_32126633/article/details/78838554)
 + [snippets](https://www.jianshu.com/p/1f1132df1def)
 
-## 2.shortcut
+## 2.shortcut(C-k, C-s)
 
 ### (1)editor
 
@@ -30,23 +30,65 @@
 + c-s-\：跳转到括号匹配处
 + C-a: choose all
 + C-up/down：滚动
++ A-arrowleft/right：last editor
++ S-A-arrowright: expand selection
++ S-点击split：垂直分割 C-k, C-\
++ C-g: go to line
++ F7: next symbol highlight
 
 ### (2)code
 
-+ C-[/] ： add tab
++ C-[/] ： indent line/outdent line
 + C-i ： select current line
 + C-S-p + 输入fold ： 可以查看所有折叠快捷键
 + A-arrow up/down ： move one line up or down
-+ S-A-mouse drag： choose columns
-+ S-A-a: block comment
++ A-arrow left/right: last location
++ S-A-mouse drag： choose column
++ S-A-a: toggle block comment
++ C-k, v：markdown同时编辑预览
++ C-backspace/delete: delete a word
++ C-S-[/] : fold
++ C-k, C-0: fold all C-k, C-j: unfold all
++ A-z: toggle world wrap
 
-### (3)plugin  
+### (3) etc
+
++ C-k, C-t: change color theme
++ terminal focus C-k: clear
++ C-S-y: debug terminal
++ C-S-u: toggle output
++ C-S-m: toggle problem
++ C-j: open/close console
++ C-1: focus editor
++ C-k, C-arrowup/d/l/r: focus editor group
++ C-0: focus sidebar
++ C-f: focus find widget  esc/S-esc
++ C-S-pageup/down：切换panel顺序
++ S-A-f: format all
++ C-k, C-f: format select
++ A-f5: move to next change
++ C-S-o: go to symbol in file
++ C-9, A-0: last editor
++ C-r: open recently
++ C-S-t: reopen closed editor
++ C-m: tab move focus通过tab获取焦点
++ C-win-w: toggle tab visibility
++ A-pageup/down: scroll
+
+### (4)plugin  
 
 #### settting sync
 
 <https：//www.cnblogs.com/ashidamana/p/6761085.html>
 
 + S-A-u/d ： 同步
+
+### (5)cpp
+
++ A-n: navigate
++ A-o: switch header/source
++ f12: declaration
++ A-f12: peak definition
 
 ## 3.编译环境
 

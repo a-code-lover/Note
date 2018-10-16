@@ -20,7 +20,9 @@ int x=[](){
 
 4. 字符串匹配
 
-5. [随机数问题](https://octman.com/blog/2013-10-20-interview-questions-random-numbers/)
+5. [随机数问题]  
+   <https://octman.com/blog/2013-10-20-interview-questions-random-numbers/>
+   <https:/****/blog.csdn.net/jinzhao1993/article/details/69056135b>
 
 ## 4. median of two sorted array(二分查找)
 
