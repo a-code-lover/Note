@@ -35,6 +35,7 @@
 + S-点击split：垂直分割 C-k, C-\
 + C-g: go to line
 + F7: next symbol highlight
++ C-S-b: select build task to run
 
 ### (2)code
 
