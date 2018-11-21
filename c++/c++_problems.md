@@ -95,3 +95,4 @@
 + 实现一个list的快排？
 + '\0'为ARSCII码0，在内存中为全零，字符串为NULL表示未分配内存，字符串为""已分配内存为指定内容。
 + cout, cerr, clog的差别？
++ 指针前加const和指针后加const，函数前加const和函数后加const。
