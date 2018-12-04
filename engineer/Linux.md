@@ -34,6 +34,7 @@
 + nmcli / nmcli device show : 网络管理 (route -n, traceroute, netstat -r, )
 + uname
 + sudo apt install mesa-utils, glxinfo | grep rendering
++ useradd命令添加用户不能登录图形界面，使用adduser或者图形界面添加。
 
 ## shortcut(Settings/Devices/keyboard)
 

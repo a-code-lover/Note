@@ -53,4 +53,9 @@
 
 ## abbreviation
 
-CLI: command line interface
++ CLI: command line interface
++ seo: 搜索引擎优化
++ crub: 数据库基本操作
++ cap: 分布式定理
++ PV(page view), UV(unique visitor), IP(ip visitor), PR(page rank)
++ GOF: 设计模式
