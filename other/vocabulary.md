@@ -1,4 +1,4 @@
-# English
+# word
 
 ## professional vacabulary
 
@@ -6,7 +6,7 @@
 + anagram: 易位构词游戏
 + a base class and a derivec class
 + assignment : assign a value to a variable
-+ baffling: 阻碍的，莫名其妙的 baffle:障碍，迷惑 
++ baffling: 阻碍的，莫名其妙的 baffle:障碍，迷惑
 + be superseded 废弃，替代
 + concatenation : 级联
 + contiguous: 邻近的anagrams
@@ -59,3 +59,6 @@
 + cap: 分布式定理
 + PV(page view), UV(unique visitor), IP(ip visitor), PR(page rank)
 + GOF: 设计模式
++ agile: 敏捷开发
++ TDD: 测试驱动开发
++ wading: 代码沼泽
