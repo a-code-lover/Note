@@ -31,15 +31,23 @@
 ## 3.command
 
 + [ls -a -l -F -s -t -S / tree -L n](https://blog.csdn.net/xuehuafeiwu123/article/details/53817161)
-+ shift + pageup/pagedown : terminal 翻页
 + nmcli / nmcli device show : 网络管理 (route -n, traceroute, netstat -r, )
 + uname
 + sudo apt install mesa-utils, glxinfo | grep rendering
++ useradd命令添加用户不能登录图形界面，使用adduser或者图形界面添加。
+
+## shortcut(Settings/Devices/keyboard)
+
++ C-A-t：终端
++ S-win-left/right/down/up：move window one monitor to left
++ C-A-T：switch system control
++ win-T：switch application
 + ctrl + alt + arrow up/down : swithch workspace
-+ **文件夹下** alt + home : 到主文件夹， ctrl + h : 显示隐藏开关， f9 ： file侧边栏， alt + arrow ： 前进后退， ctrl + t : 新建标签， ctrl + shift + n : 新建文件夹，
 + alt + ` : 在同一程序不同窗口切换
++ win-h：hide windows
++ shift + pageup/pagedown : terminal 翻页
 + win + launcher + num切换， + shift 新建
-        
++ **文件夹下** alt + home : 到主文件夹， ctrl + h : 显示隐藏开关， f9 ： file侧边栏， alt + arrow ： 前进后退， ctrl + t : 新建标签， ctrl + shift + n : 新建文件夹，
 
 ## 4.tool
 
