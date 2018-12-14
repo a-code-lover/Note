@@ -65,7 +65,7 @@
 + C-0: focus sidebar
 + C-f: focus find widget  esc/S-esc
 + C-S-pageup/down：切换panel顺序
-+ S-A-f: format all
++ S-A-f: format all C-k,C-f: format selection
 + C-k, C-f: format select
 + A-f5: move to next change
 + C-S-o: go to symbol in file

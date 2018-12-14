@@ -39,4 +39,5 @@
 + c-k：定位选中词的下一个
 + a-s-A：列模式
 + S-enter：新建一行
-
++ C-S-c: 注释单行
++ A-S-y: word wrap
