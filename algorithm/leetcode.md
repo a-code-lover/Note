@@ -70,6 +70,9 @@ int x=[](){
 
 <https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems>
 
+<details>
+<summary>findSubstring</summary>
+
 ```c++
 int findSubstring(string s){
     vector<int> map(128,0);
@@ -97,6 +100,8 @@ int findSubstring(string s){
     return d;
 }
 ```
+
+</details>
 
 ## 79.word search
 

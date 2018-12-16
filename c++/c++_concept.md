@@ -202,7 +202,7 @@ y = (int) x;    // c-like cast notation
 5. 尾随返回类型（可选）。
 6. “lambda 体”
 
-![lambda](Rsc/lambda.jpg)
+![lambda](../rsc/lambda.jpg)
 
 ```c++
 result = [](const string& str){return"Hello World" + str;}("3!");

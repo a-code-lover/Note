@@ -59,7 +59,7 @@
 + C-S-y: debug terminal
 + C-S-u: toggle output
 + C-S-m: toggle problem
-+ C-j: open/close console
++ C-j: open/close panel面板
 + C-1: focus editor
 + C-k, C-arrowup/d/l/r: focus editor group
 + C-0: focus sidebar
@@ -104,3 +104,4 @@ Mind： the folder .vscode must be put together with src files.
     + (gdb) print *(myVector._M_impl._M_start)@myVector.size() 打印整个vector。
     + print *(myVector._M_impl._M_start)@N 打印第N个成员。
     + 在vscode的debug console中执行-exec p myVector查看容器模板。
+4. C-S-b: build, 可以通过terminal运行编译好的程序。

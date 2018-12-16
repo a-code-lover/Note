@@ -8,6 +8,7 @@
 + [与系统剪切板交互](https://blog.csdn.net/zhangxiao93/article/details/53677764)
 + shift + zz: 保存退出， shift + zq: 不保存退出。
 + ctrl + ; ： 粘贴板
++ v + i + ( : 选中括号中的内容
 
 ## qucik jump
 
@@ -20,3 +21,5 @@
 + z + - 滚动屏幕，使当前光标所在行处于屏幕最后一行；
 + C-u, 使当前光标向上滚动半屏 pageup 整屏；
 + C-d, 使当前光标向下滚动半屏 pageup 整屏；
++ f-bracket, 快速跳转到下一个括号
++ shift+), 块

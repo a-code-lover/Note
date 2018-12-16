@@ -1,4 +1,4 @@
-#
+# 算法
 
 ## RSA加密算法(人名)
 
@@ -37,4 +37,4 @@
 
 ### (2)有损压缩
 
-
+## Boyer-Moore Majority Vote algorithm

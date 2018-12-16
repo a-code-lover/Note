@@ -109,6 +109,8 @@ struct iterator {
 
 ## 3.源码：序列容器Sequence Containers
 
+![stl容器](../rsc/stlContainer.png)
+
 ### (1)vector
 
 ### (2)list
@@ -128,6 +130,8 @@ struct iterator {
 <https://blog.csdn.net/mmshixing/article/details/51692892>
 
 ## 4.源码：关联式容器Associative Containers
+
+> unordered_map的底层是hashtable, 所有与顺序无关；map的底层是红黑树，所以map的效率取决于红黑树的效率。
 
 ### (1)RB_tree
 
