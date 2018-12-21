@@ -37,4 +37,4 @@
 
 ### (2)有损压缩
 
-## Boyer-Moore Majority Vote algorithm
+## Boyer-Moore Majority Vote algorithm(多数投票算法)

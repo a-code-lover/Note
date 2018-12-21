@@ -8,6 +8,7 @@
 + cout, cerr, clog的差别？
 + 指针前加const和指针后加const，函数前加const和函数后加const。
 + 对于sizeof()的深入了解。
++ sizeof("abcd"); //结果为5.
 + 将基本一维数组`int a[]`或者二维数组`int a[][]`作为函数形参如何使用。
 
 ### (1)namespace std

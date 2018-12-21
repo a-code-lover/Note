@@ -43,6 +43,7 @@
 + shift + 右击 : 当前文件夹打开power shell
 + c-a-arrow：旋转桌面
 + A-space-n:当前窗口最小化
++ C-Win-arrow:多桌面切换
 
 ## 6.批处理
 

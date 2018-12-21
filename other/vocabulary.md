@@ -32,6 +32,7 @@
 + prime number: 质数
 + pseudo-random number 伪随机数
 + prefix: 字首
++ product: 乘积
 + scalar: 纯量，只有大小没有方向的量
 + shrink the scope:缩减范围
 + verbose: detailed or prolix

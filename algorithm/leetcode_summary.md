@@ -1,6 +1,7 @@
 # leetcode 题型汇总
 
 > 学会分析复杂度？这时候特例的复杂度特别重要。
+> 基本算法：dp，分治，回溯，贪心，dfs，bfs
 
 ## Array
 
@@ -12,6 +13,7 @@
 
 + median of two sorted array
 + find minimum in rotated sorted array
++ Search in Rotated Sorted Array
 
 ### 二、与排列组合有关
 
@@ -24,13 +26,14 @@
 
 + jump game
 + largest rectangle in histgram
-+ maximal rectangle
 + trapping rain water
++ sum of subarray minimums
 
 > 从两边到中间或从中间划分
 
 + max chunks to make sorted
-+ two sum
++ maximal rectangle
++ [ksum problem](https://www.sigmainfy.com/blog/k-sum-problem-analysis-recursive-implementation-lower-bound.html)
 
 ### 四、利用下标
 
@@ -50,6 +53,20 @@
 
 + transform to chessboard
 
+### 8、矩阵变换
+
++ spiral matrix
+
 ### 其他
 
 + longest consecutive sequence
++ Maximum Sum Circular Subarray(最大连续子串和的变形)
++ Maximum Product Subarray(最大连续子串和的变形)
+
+## bfs
+
++ word search
+
+## greedy
+
++ jump game

@@ -393,3 +393,4 @@ class c(T*) {...}; //这个特化版本仅适用T为原生指标
 <https://blog.csdn.net/zhangxinrun/article/details/5940019>
 
 ## 32.decltype()
+
