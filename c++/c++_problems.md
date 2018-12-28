@@ -93,3 +93,4 @@
 + [c++自由存储区是否等同于堆？](http://www.qingpingshan.com/rjbc/cyy/35186.html)
 + stl中的sort()是使用快排(qsort())吗？稳定排序使用什么（stable_sort）？(TimSort in python)
 + 实现一个list的快排？
++ stl中string的底层实现原理？
