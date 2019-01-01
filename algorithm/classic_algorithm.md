@@ -19,6 +19,24 @@
 
 ## 大数据：查找，排序
 
+### 布隆过滤器
+
+> 布隆过滤器可以用于检索一个元素是否在一个集合中，空间效率和查询时间都远远超过一般算法，缺点是有一定的识别误率和删除困难。
+> BloomFilter的用途很广，尤其是大数据处理中，比如spam邮箱过滤；
+> Google 著名的分布式数据库 Bigtable 使用了布隆过滤器来查找不存在的行或列，以减少磁盘查找的IO次数。
+> Squid 网页代理缓存服务器在 cache digests 中使用了也布隆过滤器。
+> Venti 文档存储系统也采用布隆过滤器来检测先前存储的数据。
+> SPIN 模型检测器也使用布隆过滤器在大规模验证问题时跟踪可达状态空间。
+> Google Chrome浏览器使用了布隆过滤器加速安全浏览服务。
+
+[基本介绍](http://www.sigma.me/2011/09/13/hash-and-bloom-filter.html)
+[布隆参数优化](https://blog.csdn.net/tianyaleixiaowu/article/details/74721877)
+[python简单代码实现](https://www.cnblogs.com/cpselvis/p/6265825.html)
+
+###　哈希(散列)，冲突碰撞
+
+[hash表的存储效率一般小于50%](https://blog.csdn.net/Max_R/article/details/36629267)
+
 ## 游戏中的寻路算法
 
 ## Timsort()

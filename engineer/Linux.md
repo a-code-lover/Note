@@ -35,8 +35,9 @@
 + uname
 + sudo apt install mesa-utils, glxinfo | grep rendering
 + useradd命令添加用户不能登录图形界面，使用adduser或者图形界面添加。
++ sudo /etc/init.d/gdm restart 重启图形界面
 
-## shortcut(Settings/Devices/keyboard)
+## 4.shortcut
 
 + C-A-t：终端
 + S-win-left/right/down/up：move window one monitor to left
@@ -49,7 +50,7 @@
 + win + launcher + num切换， + shift 新建
 + **文件夹下** alt + home : 到主文件夹， ctrl + h : 显示隐藏开关， f9 ： file侧边栏， alt + arrow ： 前进后退， ctrl + t : 新建标签， ctrl + shift + n : 新建文件夹，
 
-## 4.tool
+## 5.tool
 
 ### (1)ssh
 
@@ -86,8 +87,14 @@ A Linux termimal recorder written in python that records your command lines sess
 [new installation, log in as root user](https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost)
 [remote connection](https://devdocs.magento.com/guides/v2.0/install-gde/prereq/mysql_remote.html)
 [remote connection](https://www.cnblogs.com/XL-Liang/archive/2012/05/03/2481310.html)
+[忘记密码](https://my.oschina.net/u/2297737/blog/688214)
 
-### 操作
+### (1)完全卸载
+
+[完全卸载参考，先卸载server](https://blog.csdn.net/w3045872817/article/details/77334886)
+[8.0安装参考](https://blog.csdn.net/zyqblog/article/details/80159990)
+
+### (2)操作
 
 (1)mysql命令必须以分号结尾，否则不显示。  
 (2)mysql可以输入多个语句执行。
@@ -103,7 +110,7 @@ A Linux termimal recorder written in python that records your command lines sess
 (12)子查询。逐渐增加。
 (13)联结：关系。
 
-### 原理
+### (3)原理
 
 ## 7.gdb
 
@@ -111,3 +118,9 @@ A Linux termimal recorder written in python that records your command lines sess
 <http://wiki.ubuntu.org.cn/%E7%94%A8GDB%E8%B0%83%E8%AF%95%E7%A8%8B%E5%BA%8F>
 [cdgb 0.7.0](https://cgdb.github.io/)
 <https://zhuanlan.zhihu.com/p/32843449>
+
+## 8.gnome
+
+> 当图像界面崩掉时，可以通过tty重装gnome，直接在tty下装gnome就行，此时安装的是gnome和gnome classic。
+[How To Re-Install Xorg Xserver Completely In Ubuntu](https://www.computersnyou.com/4945/re-install-xorg-xserver-completely-ubuntu/)
+> 重装Ubuntu-desktop稍微复杂一些，以上教程当grub崩掉时，双系统在Windows添加新的启动项。

@@ -72,11 +72,26 @@ vector<int> inorderTraversal(TreeNode* root) {
             s.push(cur);
             cur = cur->left;
         }
+        // 这里添加一个if(!s.empty)的判断，逻辑会更清晰
         cur = s.top();
         s.pop();
         inorder.push_back(cur->val);
         cur = cur->right;
     }
+}
+vector<int> preorderTraversal(TreeNode *root) {
+  stack<TreeNode*> nodeStack;
+  vector<int> res;
+  if (!root) return res;
+  nodeStack.push(root);
+  while (!nodeStack.empty()) {
+    TreeNode *cur = nodeStack.top();
+    res.push_back(cur->val);
+    nodeStack.pop();
+    if (cur->right) nodeStack.push(cur->right);
+    if (cur->left) nodeStack.push(cur->left);
+  }
+  return res;
 }
 
 // quick_sort with c++

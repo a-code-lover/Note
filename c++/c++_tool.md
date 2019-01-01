@@ -47,7 +47,8 @@ python解释器：cpython, ipython, pypy.
 
 ## 5.GDB
 
-(1)[gdb调试打印容器](https://blog.csdn.net/xiedejun1984/article/details/5752945)
+(1)[gdb调试打印容器](https://blog.csdn.net/xiedejun1984/article/details/5752945)　　
+[gdb调试基础](https://cloud.tencent.com/developer/article/1036960)
 
 + vscode是直接调用gdb。
 + (gdb) print *(myVector._M_impl._M_start)@myVector.size() 打印整个vector。

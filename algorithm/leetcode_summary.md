@@ -70,3 +70,22 @@
 ## greedy
 
 + jump game
+
+## tree
+
+### 遍历
+
+[非递归遍历:四种](https://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html)
+
+### 递归
+
+[树的路径和](https://leetcode.com/problems/path-sum-ii/)
+[树的最大路径](?)
+
+### +dp
+
+[构建二搜树,树的拷贝](https://leetcode.com/problems/unique-binary-search-trees-ii/)
+
+### 设计
+
+[BST序列化和反序列化为字符串传输](https://leetcode.com/problems/serialize-and-deserialize-bst/)
