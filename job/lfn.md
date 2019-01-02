@@ -1,6 +1,17 @@
 # 1
 
-## da
+## algorithm
+
+### 海量数据处理（含topk问题）
+
+[海量数据处理面试题](http://www.cnblogs.com/timchen5858/p/3652553.html?utm_source=tuicool&utm_medium=referral)
+
+### 外排序为什么用归并？
+
+因为归并排序算法不需要将所有记录读入内存。比如你的内存是10G, 对90G的数据排序，external merge sort的步骤是类似这样的：
+
+1. 读10G数据然后进行in memory的sort，重复9次。得到9个10G的已经排好序的数据块。
+2. 从每个chunk里分别读1G到9个输入buffer里，进行merge（9个已经排好序的1G数据一起merge），剩下的1G内存作为输出buffer用来存结果。当merge好1G数据后，把这1G的结果复制到硬盘中，然后清空输出buffer，接着merge，直到某个输入buffer中的1G数据都处理完，再向该输入buffer读入1G数据，如此往复直到所有9个数据块中的数据都处理完。
 
 ### 怎么给大量url和ip去重
 

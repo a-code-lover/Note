@@ -109,7 +109,7 @@ struct iterator {
 
 ## 3.源码：序列容器Sequence Containers
 
-![stl容器](../rsc/stlContainer.png)
+![stl容器](../rsc/program/stlContainer.png)
 
 ### (1)vector
 

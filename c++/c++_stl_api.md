@@ -28,4 +28,10 @@
 
 ### bitset
 
+## algorithm
+
+### 堆操作
+
+`std::make_heap()`, `std::push_heap()`, `std::pop_heap()`, `sort_heap()`, `is_heap()`
+
 > 实现常量长度的位数组
