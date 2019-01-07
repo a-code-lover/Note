@@ -92,4 +92,11 @@
 
 ## string
 
+### 字符串映射，a-z -> 1-26，time->int
 
+[find-and-replce-pattern](https://leetcode.com/problems/find-and-replace-pattern/)
+[minimum-time-difference](https://leetcode.com/problems/minimum-time-difference/)
+
+### Longest Common Subsequence
+
+[Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/discuss/103214/Java-DP-Solution-(Longest-Common-Subsequence))
