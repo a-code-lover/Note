@@ -89,3 +89,7 @@
 ### 设计
 
 [BST序列化和反序列化为字符串传输](https://leetcode.com/problems/serialize-and-deserialize-bst/)
+
+## string
+
+
