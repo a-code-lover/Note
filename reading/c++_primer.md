@@ -423,7 +423,7 @@ ifstream默认使用in模式，ofstream**默认使用out模式和截断**。
 > + 容器的元素是拷贝。
 > + **string类型提供额外接受c风格字符串的操作**。
 
-1.操作
+### 操作
 
 ```c++
   //返回指向插入元素的迭代器
@@ -448,15 +448,255 @@ ifstream默认使用in模式，ofstream**默认使用out模式和截断**。
   c.clear();
 ```
 
-2.访问
+### 访问
+
 访问成员函数返回的是引用，下标运算符越界时，编译器并不提供检查。使用at，越界时会抛出异常。
 
-3.容量
+### 容量
+
 `reserve`小于当前容量是不会退回内存空间，具体内存扩展依赖实现。`resize`只改变元素数目，不是容量，不能用来减少内存空间。`shrink_to_fit`要求vector,string,deque退回内存，但具体实现可能选择忽略。`size`为保存元素个数，`capacity`为不重新分配内存的情况下最多可存几个元素。分配扩展基本原则：确**保用push_back向vector添加元素的操作具有高效率**。
 
-4.适配器：stack, queue, priority_queue
+### 适配器：stack, queue, priority_queue
+
 每个适配器都定义两个构造函数：
 `stack<int> stk(deq); //从dep拷贝元素到stk`  
 `stack<string, vector<string>> str_stk2(svec); //默认stack和queue用deque实现，可以指定用vector实现，初始化保存svec的元素`
 
-## 第十章：泛型算法
+## 第十章：泛型算法（generic）
+
+> + 标准库容器定义的操作集合惊人的小。标准库并未给每个容器添加大量功能，而是提供一组算法，这些算法大多数独立于任何特定的容器。它们是通用的或者泛型的。
+> + 迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
+> + 算法永远不会执行容器的操作：算法永远不会改变容器大小。
+
+### 基本
+
+1.只读算法
+
+```c++
+  //由于string定义了+运算符，所以可以调用accumulate拼接字符串
+  string sum = accumulate(v.cbegin(), v.cend(), string(""));
+  //字符串字面值的类型是const char*?
+  string sum = accumulate(v.cbegin(), v.cend(), ""); //错误：const char*没有定义+运算符
+
+```
+
+对于只读而不改变元素的算法，通常最好使用cbegin()和cend()。
+那些只接受一个单一迭代器表示第二个序列的算法，都假定第二个序列至少和第一个序列一样长。**有些算法接受三个迭代器参数，有的接受四个迭代器参数。确保算法不会访问第二个序列中不存在的元素是程序员的责任。**
+
+2.写容器元素
+
+```c++
+  vector<int> vec;
+  //灾难：修改vec中10个不存在的元素
+  fill_n(vec.begin(), 10, 0);
+  //正确：使用插入迭代器，back_insert等价于push_back
+  fill_n(back_inserter(vec), 10, 0);
+```
+
+一些算法接受一个迭代器之处一个单独的目的位置，向目的位置**写入数据**的算法假定目的位置足够大，能容纳写入的元素。**注意成员函数和泛型算法的区别：不修改容器大小**。
+
+```c++
+  auto ret = copy(begin(a1), end(a1), a2); //把a1的内容拷贝给a2，确保a2大小至少大于a1
+  replace(ilst.begin(), ilst.end(), 0, 42); //将所有0改为42，可以使用replace_copy
+```
+
+3.重排元素
+
+```c++
+  sort(words.begin(), words.end());
+  auto end_unique = unique(words.begin(), words.end()); //算法不执行容器的操作
+  words.erase(end_unique, words.end()); //调用成员方法实现真正删除
+```
+
+### 定制
+
+一元谓词（unary predicate）：只接受一个参数和二元谓词（binary predicate):接受两个参数。
+
+1.lambda(不限谓词)
+`[capture list](parameter list) -> return type {function body} //其中捕获列表和函数体是必须的`
+
+lambda通过将局部变量包含到捕获列表来指出将会使用这些变量。
+`find_if`, `for_each`, `sort`等。
+
+2.值捕获和引用捕获
+
+类似参数传递，变量的捕获可以是值或引用。与参数不同，被捕获的变量的值是在lambda创建时拷贝（**默认拷贝**），而不是调用时拷贝。
+引用捕获与返回引用有着相同的问题和限制，必须确保被引用的对象在lambda执行的时候是存在的。lambda捕获的都是局部变量，函数执行完就不存在了。**引用捕获有时是必要的**，如接受ostream的引用。
+**建议：尽量保持变量捕获简单化，尽量少捕获，避免潜在的捕获导致的问题。**
+
+3.隐式捕获
+
+**指定编译器推断捕获列表，`&`告诉编译器采用捕获引用方式，`=`采用值捕获方式。**
+**如果混合使用隐式和显式，一个元素必须指定隐式的方式，且后面的捕获方式必须都和隐式的不同。**
+使用`mutable`关键字，可以修改捕获变量的值。
+
+4.如果不指定返回类型，编译器会自己推断，如果推断的类型与需要的返回类型不符，则会编译报错。
+
+5.**参数绑定**
+
+对于只有在一两个地方使用的简单函数，lambda表达式是最有用的。如果lambda表达式的捕获列表为空，通常可以用函数代替它。对于捕获局部变量的lambda，用函数替换就不那么容易（**谓词数量问题**）。标准库提供`bind`函数(函数适配器)，进行**参数列表的适应**。
+
+```c++
+  //_n占位符定义在placeholders命名空间中
+  using namespace std::placeholders;
+  //bind会将g(_1, _2)映射为f(a,b,_2,c,_1)
+  auto g = bind(f, a, b, _2, c, _1);
+  //参数重排
+  sort(words.begin(), words.end(), isShorter);
+  sort(words.begin(), words.end(), bind(isShorter, _2, _1));
+  //使用标准库ref函数拷贝引用
+  for_each(words.begin(), words.end(), bind(print, ref(os), _1, ' '));
+```
+
+默认下，bind的那些不占位的参数使用拷贝的形式，但与lambda类似，有时希望使用引用或者对象无法拷贝，此时必须使用`ref`标准库函数（functional中）。
+
+### 其他迭代器
+
++ 插入迭代器：这些迭代器被绑定到容器上，用来向容器插入元素；
++ 流迭代器：绑定到输入或者输出流上，用来遍历所关联的IO流；
++ 反向迭代器：向后移动，除forward_list之外的标准库容器均有反向迭代器；
++ 移动迭代器：这些专用的迭代器不是拷贝其中的元素，而是移动他们。
+
+1.插入迭代器
+back_inserter(c)：创建使用push_back的迭代器；
+front_inserter(c)：创建使用push_front的迭代器；
+inserter(c, iter)：创建使用insert的迭代器；
+
+`copy(lst.cbegin(), lst.cend(), front_inserter(lst2);`
+`copy(lst.cbegin(), lst.cend(), inserter(lst2, lst2.begin()));`
+
+2.反向迭代器
+
+`sort(vec.begin(), vec.end());` `sort(vec.rbegin(), vec.rend());`迭代器必须支持递减操作才能定义反向迭代器，所以forward_list和流迭代器没有反向。
+
+迭代器与反向迭代器之间转换：转换后指向的不是同一个位置，二是相邻的位置。
+`list<int>::iterator iter(riter.base());`
+`list<int>::reverse_iterator riter(iter);`
+
+### 泛型算法结构
+
++ 输入迭代器：只读，不写；单遍遍历，只能递增；
++ 输出迭代器：只写，不读；单遍遍历，只能递增；
++ 前向迭代器：可读写，多遍遍历，只能递增；
++ 双向迭代器：可读写，多遍遍历，可递增递减；
++ 随机访问迭代器：可读写，多遍遍历，支持迭代器所有操作。
+
+**任何算法的最基本的特性是它要求其迭代器提供哪些操作。**c++标准指明了泛型和数值算法的每个迭代器参数的最小类别。例如，`find`算法在序列上一遍扫描，对元素只读，因此至少需要输入迭代器；`replace`函数需要一对迭代器，至少是前向迭代器。`sort`算法要求随机访问迭代器。**对向一个算法传递错误类别的迭代器的问题，很多编译器不会给出任何警告信息**。  
+
+算法的形参模式大体分为四种：
+`alg(beg, end, other args);`
+`alg(beg, end, dest, other);`qi
+`alg(beg, end, beg2, other);`qi
+`alg(beg, end, beg2, end2, otqiher);`
+
+命名规范：
+
++ 一些算法使用重载的形式传递一个谓词，`unique(beg, end);` `unique(beg, end, cmp);`
++ _if版本, `find(beg, end, val);` `find(beg, end, pred);`
++ _copy版本, `reverse(beg, end);` `reverse(beg, end, dest);`
+
+### 特定容器算法
+
+由于list和forward_list的链式结构，使用通用算法的代价很高，应该**优先使用成员函数版本的算法**。
+
+##　第11章：关联容器
+
+关联容器对其关键字有一些限制。对于有序容器，**关键字类型必须定义元素比较的方法**。默认情况下，标准库使用关键字类型的`<`运算符来比较两个关键字。
+
+```c++
+  bool compareIsbn(const Sales_data &lhs, const Sales_data &rhs) {
+    return lhs.isbn() < rhs.isbn();
+  }
+  multiset<Sales_data, decltype(compareIsbn)*> bookstore(compareIsbn);
+```
+
+标准库类型pair，定义在头文件utility中。`pair<T1, T2> p; p = {v1, v2}; p = make_pair(v1, v2); p.first; p.second;`
+
+### 关联容器操作
+
+1.类型：key_type, mapped_type, value_type
+2.可以通过迭代器遍历map或set（有序的按字典序），但**不能通过迭代器修改关键字的值**，迭代器是const的。
+
+```c++
+  c.insert(v);
+  c.emplace(args);
+  c.insert(b, e);
+  c.insert(il);
+  c.insert(p, v); //从迭代器p开始搜索新元素的存储位置
+  c.insert(p, args);
+
+  c.erase(k);
+  c.erase(p);
+  c.erase(b, e);
+
+  c[k]; //返回关键字为k的元素，不存在就添加并初始化
+  c.at[k]; //返回关键字为k的元素，不存在则抛出异常
+```
+
+3.对于mutimap和mutiset，如果`lower_bound`和`upper_bound`返回相同的迭代器，则关键字不存在。直接调用`equal_range`，返回迭代器pair。如果未找到，则pair两个迭代器都指向关键字的插入位置。
+
+4.使用无需容器通常更简单，通常也会有更好的性能。
+
+###　无序关联容器
+
+有序关联容器底层是RBTree，无序关联容器底层是hashmap。无序容器对关键字的要求：默认情况下，无序容器使用关键字类型的`==`运算符比较元素，并使用一个`hash<key_type>`类型的对象生成哈希值。所以为了使用无序容器的自定义类型版本，必须提供==运算符和哈希计算函数。
+
+```c++
+  size_t hasher(){};
+  bool eqOp() {};
+  using SD_multiset = unordered_multiset<Sales_data, decltype(hasher)*, decltype(eqOp)*>;
+  SD_multiset bookstore(42, hasher, eqOp);
+```
+
+## 第12章：动态内存
+
+###　智能指针
+
+1.新的标准库提供两种智能指针类型来管理动态对象：`shared_ptr`允许多个指针指向同一个对象；`unique_ptr`则独占指向的对象；`weak_ptr`的伴随类，它是一种弱引用，指向shared_ptr所管理的对象。三种类型都定义在`memory`中。
+
+2.默认初始化的智能指针中保存着一个空指针，最安全的分配和使用动态内存的方法是调用一个名为`make_shared`的标准库函数。
+
+```c++
+  shared_ptr<string> p1 = make_shared<string>(10, 'a');
+  shared_ptr<string> p2(p1);
+  p1.use_count(); //返回计数，可能很慢，主要用于计数
+  p1.get(); //返回p1中保存的指针，小心使用
+```
+
+3.使用**计数器**还是其他数据结构记录引用数量，完全由标准库的具体实现决定。当引用计数为0，则销毁对象并释放内存。
+4.如果**将shared_ptr存放在容器中**，而后不再需要部分元素，要记得erase删除不再需要的元素。
+
+### 直接管理内存
+
+1.使用内置指针管理动态对象，生命期直到被释放时为止。返回指向动态内存的指针的函数给调用者增加负担，调用者必须记得释放内存。
+
+三个常见问题：
+
++ 忘记delete内存
++ 使用已经释放掉的对象
++ 同一块内存释放两次
+
+2.delete后指针变成**空悬指针**（dangling pointer），即指向一块曾经保存数据对象但现在已经失效的内存的指针。如果需要保留指针，可以在delete后将指针赋值为nullptr。在实际系统中，查找指向相同内存的所有指针异常困难。
+
+3.不要混用普通指针和智能指针
+
+```c++
+  int *x(new int(1000));
+  process(x);  //错误：不能将int*转换为shared_ptr<int>
+  process(shared_ptr<int>(x)); //合法，但内存会被释放
+  int j = *x; // 未定义的：x是一个空悬指针
+
+  p = new int(1024); //错误：不能将一个指针赋值给shared_ptr
+  p.reset(new int(1024)); //正确：p指向一个新对象
+```
+
+4.get用来将指针的权限传递给代码，只有确定代码不会delete指针的情况下才可以使用。
+5.相对于使用普通指针，使用智能指针能更好应对代码异常错误时资源正确释放。
+
+### 智能指针陷阱
+
++ 不使用相同的内置指针初始化（或reset）多个智能指针；
++ 不delete get()返回的指针；
++ 不使用get()初始化或reset另一个智能指针；
++ 如果使用get()返回的指针，记得最后一个智能指针销毁后，指针无效；
++ 如果使用智能指针管理的不是new分配的内存，记得传递给它一个删除器。
