@@ -7,3 +7,11 @@
 ## memcached
 
 一致性：强一致性，弱一致性，最终一致性
+
+### session cookie
+
+### single point failure
+
+### pull push
+
+### fan out

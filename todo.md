@@ -5,12 +5,7 @@
 
 ## 1.crucial and urgent
 
-+ 毕设开题报告
-
 ## 2.crucial but not urgent
-
-+ beautiful md preview
-+ gdb调试查看容器
 
 ## 3.urgent but not crucial
 
