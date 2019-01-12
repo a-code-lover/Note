@@ -700,3 +700,62 @@ inserter(c, iter)：创建使用insert的迭代器；
 + 不使用get()初始化或reset另一个智能指针；
 + 如果使用get()返回的指针，记得最后一个智能指针销毁后，指针无效；
 + 如果使用智能指针管理的不是new分配的内存，记得传递给它一个删除器。
+
+### unique_ptr
+
+1.定义一个unique_ptr时，需要将其绑定到一个new返回的指针，必须采用直接初始化的形式；不支持普通的拷贝或赋值操作，但可以通过release或reset将指针的所有权从一个（非const）unique_ptr转移到另一个unique_ptr。编译器的早版本包含auto_ptr，目前仍包含兼容，但应该使用uniqu_ptr。
+
+```c++
+  unique_ptr<int> p1(new int(42));
+  unique_ptr<int> p2(p1.release());
+  unique_ptr<int> p3(new int(43));
+  p3.reset(p2.release());
+
+  p2.release(); //错误：p2不会释放内存，而且我们丢失了指针
+  auto p = p2.release(); //正确，但必须记得delete(p)
+```
+
+2.可以拷贝和赋值一个将要被销毁的unique_ptr，最常见的例子是从函数返回一个unique_ptr。
+
+```c++
+  unique_ptr<int> clone(int p) {
+    return unique_ptr<int>(new int(p));
+  }
+```
+
+3.unique_ptr默认情况下用delete释放对象，我们可以重载默认的删除器。
+`unique_ptr<objT, delT> p(new objT, fcn);`
+
+### [weak_ptr](https://blog.csdn.net/VonSdite/article/details/81556647)
+
+1.主要作用是打破shared_ptr的循环引用。
+2.不会增加shared_ptr的计数，不支持`*`和`->`，但可以通过`lock()`接口返回shared_ptr，所有weak_ptr会随着最后一个shared_ptr的销毁一同被销毁。
+
+## 动态数组
+
+### new和数组
+
+1.`int *pa = new int[10];` new分配要求数量的对象并返回指向第一个对象的指针。“动态数组”有些误导，当用new分配一个数组时，**实际上得到的是一个元素类型的指针，而不是一个数组类型**，所以不支持begin，end，下标等操作。
+2.**动态分配一个空数组是合法的**。
+3.释放动态数组，`delete [] pa;`必须在指针前加`[]`，否则未定义。
+
+### allocator类
+
+1.`new`分配内存创建对象，`delete`析构对象释放内存，allocator类将内存分配和对象构造分离(会增加一定开销)。
+
+```c++
+  allocator<T> a;
+  auto p = a.allocate(n); //p为首元素指针
+  a.deallocate(p, n);
+  a.construct(p, args);
+  a.destroy(p);
+```
+
+2.拷贝和填充未初始化内存的算法
+
+```c++
+  uninitialized_copy(b,e,b2); //将迭代器b到e的对象拷到b2指定的内存
+  uninitialized_copy_n(b,n,b2);
+  uninitialized_fill(b,e,t); //在b到e指定的内存范围构造对象值为t
+  uninitialized_fill_n(b,n,t);
+```
