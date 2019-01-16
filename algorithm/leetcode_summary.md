@@ -2,6 +2,7 @@
 
 > 学会分析复杂度？这时候特例的复杂度特别重要。
 > 基本算法：dp，分治，回溯，贪心，dfs，bfs
+> name: item, index, segment, all, path, value, intersection, gap
 
 ## Array
 
