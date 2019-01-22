@@ -15,6 +15,7 @@
 | 快速排序 | o(nlogn) | o(nlogn) | o(n2) | o(logn) | 不稳定 |
 | 归并排序 | o(nlogn) | o(nlogn) | o(nlogn) | o(n) | 稳定 |
 | 基数排序 | o(d(n+r)) | o(d(n+r)) |o(d(n+r)) | o(n+rd) | 稳定 |
+| 桶排序  |
 
 ## 3.查找
 

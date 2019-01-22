@@ -1,5 +1,7 @@
 # 九章算法系统设计课程
 
+[geogle large scale system design problem](https://www.jiuzhang.com/qa/627/)
+
 ## 
 
 [Redis架构之防雪崩设计](https://www.jiuzhang.com/article/pbt7Df/)
