@@ -1,5 +1,11 @@
 # 算法
 
+## basic
+
+### 分治
+
+![分治思想](/rsc/分治.png)
+
 ## RSA加密算法(人名)
 
 <http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html>
@@ -56,3 +62,11 @@
 ### (2)有损压缩
 
 ## Boyer-Moore Majority Vote algorithm(多数投票算法)
+
+## 字符串匹配算法
+
+### 最短摘要生成
+
+### 最小生成树算法
+
+### 最短路径

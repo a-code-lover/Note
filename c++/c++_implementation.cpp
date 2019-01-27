@@ -93,6 +93,31 @@ vector<int> preorderTraversal(TreeNode *root) {
   }
   return res;
 }
+void postOrder3(TreeNode *root)     //非递归后序遍历
+{
+    stack<TreeNode*> s;
+    TreeNode *cur;                      //当前结点 
+    TreeNode *pre=NULL;                 //前一次访问的结点 
+    s.push(root);
+    while(!s.empty())
+    {
+        cur=s.top();
+        if((cur->left==NULL&&cur->right==NULL)||
+           (pre!=NULL&&(pre==cur->left||pre==cur->right)))
+        {
+            cout<<cur->val<<" ";  //如果当前结点没有孩子结点或者孩子节点都已被访问过 
+              s.pop();
+            pre=cur; 
+        }
+        else
+        {
+            if(cur->right!=NULL)
+                s.push(cur->right);
+            if(cur->left!=NULL)    
+                s.push(cur->left);
+        }
+    }    
+}
 
 // quick_sort with c++
 template<class ForwardIt, class UnaryPredicate>

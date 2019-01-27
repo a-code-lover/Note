@@ -9,6 +9,7 @@
 + shift + zz: 保存退出， shift + zq: 不保存退出。
 + ctrl + ; ： 粘贴板
 + v + i + ( : 选中括号中的内容
++ visual模式下，U/u：大小写转换
 
 ## qucik jump
 

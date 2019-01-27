@@ -66,6 +66,18 @@ int binarySearch(int arr[], int low, int high, int target) {
 
 ## 6.树
 
+### trie树（字典树，前缀树）
+
+### suffix tree（后缀树）
+
+### segment tree（线段树）
+
+[简单线段树](http://www.cnblogs.com/TenosDoIt/p/3453089.html)
+
+### 并查集
+
+### Huffman tree
+
 ### 非递归实现遍历
 
 [树的遍历递归/非递归](https://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html)
@@ -76,6 +88,4 @@ int binarySearch(int arr[], int low, int high, int target) {
 + 堆排序
 + 优先级队列：作业调度
 
-## 8.分治
-
-![分治思想](/rsc/分治.png)
+### 杨氏矩阵
