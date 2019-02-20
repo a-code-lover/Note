@@ -23,5 +23,6 @@ how to?
 4.go to the core and practise about it.
 
 5.ask questions.
+**what? where? when? why? how?**(application + principle)
 
 6.repeat.
