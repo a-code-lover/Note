@@ -31,16 +31,18 @@
 + SELECT name,birth FROM customer WHERE birth>='1990/1/1'; --条件
 + SELECT name,birth FROM customer WHERE name **LIKE '李%'**; --%代笔0个以上字符，_表示一个字符
 + SELECT name,birth FROM customer WHERE birth>='1990/1/1' AND name LIKE '李_'; --多条件
-+ SELECT name,birth FROM customer WHERE birth>='1990/1/1' AND name LIKE '李_', ORDER BY sec ASC, birth DESC; --排序
-+ SELECT name,birth FROM customer WHERE birth>='1990/1/1' AND name LIKE '李_', ORDER BY sec ASC, birth DESC LIMIT 1,2; --从1开始取2条，limit 2表示从0开始取2条
-+ SELECT sex,COUNT(id) FROM customer GROUP BY sex; --数据分组，统计男女人数
++ SELECT name,birth FROM customer WHERE birth>='1990/1/1' AND name LIKE '李_', **ORDER BY** sec **ASC**, birth **DESC**; --排序
++ SELECT name,birth FROM customer WHERE birth>='1990/1/1' AND name LIKE '李_', ORDER BY sec ASC, birth DESC **LIMIT 1,2**; --从1开始取2条，limit 2表示从0开始取2条
++ SELECT sex,COUNT(id) FROM customer **GROUP BY** sex; --数据分组，统计男女人数
 + SELECT sex,COUNT(id)*2 AS cnt FROM customer GROUP BY sex; --别名，加减乘除运算
 + 处理算术运算，比较运算等，还提供数据库函数字符串函数，数值函数，日期函数等。
 + SELECT u.name,o.oid FROM order AS o INNER JOIN user AS u **ON** o.uid=u.uid; --内连接
-+ 内连接，左外连接，右外连接，自连接
++ [内连接，左外连接，右外连接，自连接](https://blog.csdn.net/plg17/article/details/78758593)
 + SELECT * FROM product WHERE price > (SELECT AVG(price) FROM product); --基本子查询
-+ SELECT name,address FROM user WHERE uid NOT IN (SELECT uid FROM order WHERE odate=''); --多个返回值的子查询
-+ SELECT name,address FROM user WHERE EXISTS (SELECT * FROM order WHERE user.uid=order.uid); --查询至少一单的用户
++ SELECT name,address FROM user WHERE uid **NOT IN** (SELECT uid FROM order WHERE odate=''); --多个返回值的子查询
++ SELECT name,address FROM user WHERE **EXISTS** (SELECT * FROM order WHERE user.uid=order.uid); --查询至少一单的用户
++ SELECT country FROM websites **UNION** SELECT country FROM Apps ORDER BY country; --从两表选出所有不同country,不含重复
++ SELECT country FROM websites **UNION ALL** SELECT country FROM Apps ORDER BY country; --从两表选出所有不同country --包含重复
 
 + ALTER TABLE visitor MODIFY name VARCHAR(30); --由VARCHAR(20)改为VARCHAR(30)
 + ALTER TABLE visitor ADD old INT；
@@ -53,6 +55,13 @@
 + CREATE TABLE customerH SELECT * FROM customer; --复制列结构及数据
 + CREATE TABLE customerH **LIKE** customer; --复制列结构，包括PRIMARY KEY和AUTO_INCREMENT
 + INSERT INTO customerH SELECT * FROM customer; --复制数据
+
+### sql语句拓展
+
+1.`SELECT u.name,o.oid FROM order AS o INNER JOIN user AS u **ON** o.uid=u.uid;`  SQL语句中`AS`可以忽略，使用别名后就必须使用别名，如写`user.name`则报错找不到user。
+2.[sql四大排序函数](https://www.cnblogs.com/52XF/p/4209211.html)
+3.`select *,ROW_NUMBER() over(partition by Course order by Score DESC)排名 from UserGrade` 思路:根据学科分组,根据成绩排序,使用分区函数`partition by`
+4.<https://leetcode.com/problems/second-highest-salary/discuss/52952/A-Simple-Answer>
 
 ## transaction
 
@@ -108,6 +117,13 @@ REDO日志：事务处理日志，commit后出错，利用redo日志恢复。客
 + 使用IS NOT NULL、<>比较运算符；
 + 对索引列使用给运算或函数；
 + 复合索引的第一列没包含在WHERE语句中。
+
+### 索引选择
+
++ 较频繁作为查询字段；
++ 唯一型太差的字段不适合；
++ 更新频繁的字段不适合；
++ 不作为WHERE条件查询的字段不适合；
 
 表如何设计？
 
