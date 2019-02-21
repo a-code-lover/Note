@@ -54,6 +54,8 @@
 + CREATE TABLE customerH **LIKE** customer; --复制列结构，包括PRIMARY KEY和AUTO_INCREMENT
 + INSERT INTO customerH SELECT * FROM customer; --复制数据
 
+## transaction
+
 + SHOW CREATE TABLE customer; --查看包括存储引擎
 + SHOW CREATE TABLE customer \G --用\G替换分号是监视器的小技巧，方便查看
 + ALTER TABLE customer ENGINE=MyISAM;
@@ -61,8 +63,6 @@
 + SET AUTOCOMMIT=0; --关闭自动提交
 + SELECT @@AUTOCOMMIT; --查看自动提交模式
 + SAVEPOINT sp; ROLLBACK TO SAVEPOINT sp;
-
-## transaction
 
 + drop database; drop table; drop; alter table; 这几个命令执行后会自动commit，不在事务处理范围之内。
 + 锁：共享锁（读锁），排他锁（写锁），粒度：行，表，库。
@@ -82,3 +82,92 @@
 
 UNDO日志：回滚段，在修改数据之前保存变更前的数据，表内容有指向undo日志的指针。
 REDO日志：事务处理日志，commit后出错，利用redo日志恢复。客户端更新数据先更新内存，同时将事务写到REDO日志（实时），到达某一检查点是更新硬盘数据。如果写硬盘出错（如断电导致内存丢失），则排除故障并可根据REDO日志还原到故障点前。
+
+## 索引与视图
+
++ CREATE INDEX idxlp ON employee(lname_pinyin); --对表employee的lname_pinyin列建立索引名为idxlp
++ SHOW INDEX FROM employee\G
++ DROP INDEX idxlp ON employee;
++ CREATE UNIQUE INDEX idx_lname ON employee(lname, fname); --复合索引和唯一索引
++ **EXPLAIN** SELECT * FROM employee WHERE lname_pinyin='wang'\G
++ CREATE VIEW 视图名(列名) AS SELECT语句 [WITH CHECK POINT];
++ CREATE OR REPLACE VIEW 视图名 AS SELECT语句;
++ DROP VIEW v_order;
++ SHOW TABLES; --会将视图与表混在一起
++ `SHOW TABLES LIKE 'V\_%';` --给视图具有特征的命名
++ SHOW FIELDS FROM v_order;
++ SELECT * FROM v_order WHERE oid='';
+
+丛生索引？
+唯一索引：含有重复数据则报错
+创建索引的目的是提高搜索效率，如果遍历的次数与创建索引前变化不大，说明创建索引不合理。
+
+### 索引失效
+
++ 使用LIKE模糊匹配时，进行后方一致或部分一致检索不能使用索引；
++ 使用IS NOT NULL、<>比较运算符；
++ 对索引列使用给运算或函数；
++ 复合索引的第一列没包含在WHERE语句中。
+
+表如何设计？
+
+### 视图
+
+视图本质是将select语句的检索结果用表的形式保存下来（假表），纯粹的条件索引，视图本身不包含数据，用户可以像使用普通物理表一样使用。视图作用包括：
+
++ 可以公开特定的行或列，达到权限控制管理；
++ 简化复杂的sql查询，查询代码分割简化；
++ 限制可插入/更新的范围；
++ 修改表中的数据后，视图对应的假表会跟着变化；
++ 视图的select限制：不能包含子查询，不能包含系统变量或用户变量；
++ [with check point]选项规定修改操作必须符合视图的检索条件；
++ 使用视图简化了SELECT语句，但不意味着简化内部的处理；
+
+对视图进行数据插入、更新、删除操作与表一样，但某些情况下不能执行修改：
+
++ 视图列中函数有统计函数；
++ 视图定义了GROUP BY/HAVING语句，DISTINCT语句，UNION语句；
++ 视图使用子查询；
++ 跨表修改；
+
+![视图](./img/view_sql.png)
+
+## 存储过程
+
+使用各种条件判断，循环控制等将一些sql命令组织起来形成程序，实现简单的sql语句不能实现的功能。可以提高性能，减轻网络负担，防止对表的直接访问，将数据库的处理黑盒化。
+
+```sql
+DELIMITER // --将分割符改为//
+CREATE PROCEDURE 存储名称(参数种类IN/OUT 参数名 参数类型)
+BEGIN
+  处理内容
+END
+//
+```
+
+## 函数与触发器
+
+```sql
+CREATE FUNCTION 函数名(参数，数据类型)
+RETURNS 返回类型
+BEGIN
+  sql语句
+  RETURN 返回值;
+END
+```
+
+```sql
+CREATE TRIGGER 触发器名 发生时刻 时间名
+  ON 表明 FOR EACH ROW
+BEGIN
+  SQL语句
+END
+```
+
+![触发器例子](./img/trigger_sql.png)
+
++ SHOW PROCEDURE STATUS\G
++ SHOW FUNCTION STATUS\G
++ SHOW TRIGGERS\G
+
+my.init文件和my.cnf文件？
