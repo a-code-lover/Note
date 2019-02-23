@@ -59,9 +59,41 @@
 ### sql语句拓展
 
 1.`SELECT u.name,o.oid FROM order AS o INNER JOIN user AS u **ON** o.uid=u.uid;`  SQL语句中`AS`可以忽略，使用别名后就必须使用别名，如写`user.name`则报错找不到user。
-2.[sql四大排序函数](https://www.cnblogs.com/52XF/p/4209211.html)
+
+2.[sql四大排序函数](https://www.cnblogs.com/52XF/p/4209211.html)，mysql没有rank函数。
+
 3.`select *,ROW_NUMBER() over(partition by Course order by Score DESC)排名 from UserGrade` 思路:根据学科分组,根据成绩排序,使用分区函数`partition by`
+
 4.<https://leetcode.com/problems/second-highest-salary/discuss/52952/A-Simple-Answer>
+
+5.get the nth highest salary from the Employee table b
+
+```sql
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+DECLARE M INT; --冒号结束
+SET M=n-1;
+  RETURN (
+      # Write your MySQL query statement below.
+      SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC limit M,1 --无冒号
+  );
+END
+```
+
+6.[mysql实现rank函数](https://blog.csdn.net/justry_deng/article/details/80597916)
+
+7.<https://leetcode.com/problems/rank-scores/submissions/>
+
+```sql
+SELECT
+  Score,
+  convert(if(@prev <> (@prev := Score), @rank := @rank+1, @rank),unsigned) Rank
+  --convert 类型转换，if语句返回的是字符串
+FROM
+  Scores,
+  (SELECT @rank := 0, @prev := -1) init
+ORDER BY Score desc
+```
 
 ## transaction
 
