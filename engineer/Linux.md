@@ -6,6 +6,7 @@
 + [common linux command](https://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 + [all linux command](http://www.runoob.com/linux/linux-command-manual.html)
 + [terminal shortcut](https://www.cnblogs.com/cobbliu/p/3629772.html)
++ [bash 快捷键](https://github.com/hokein/Wiki/wiki/Bash-Shell%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE)
 
 ## 2.basic
 
@@ -79,6 +80,11 @@ A Linux termimal recorder written in python that records your command lines sess
 ### (1)Notice
 
 1) no spaces before or after equal sign when set an variable.
+
+### 快捷使用
+
++ C-a:行首
++ tab:補全
 
 ## 6.mysql
 

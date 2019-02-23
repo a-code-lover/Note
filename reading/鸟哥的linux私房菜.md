@@ -9,6 +9,10 @@
 3.帮助：man ls, info ls, ls --help
 4.tab补全，两次tab查看匹配指令列表
 
+## 命令
+
+gdisk针对GPT分区，fdisk针对MBR分区。
+
 ## 文件系统
 
 权限：用户，群组，其他人
@@ -96,7 +100,55 @@ inode bitmap inode对照表
 
 好处：移动文件或重命名不影响inode;可以通过直接删除inode删除文件；可以在不关闭软件的情况下更新，生成新的inode，旧的回收。
 
+`ll -sh`可以查看文件大小以及使用的block大小
+
 ### 日志式文件系统
 
 保证ext文件系统的一致性，用于错误恢复；写文件时写日志，类似mysql redo日志。
 **断电宕机等非正常关机可能导致文件系统不一致，重启后可能花很长事件做磁盘检查，甚至导致文件系统损坏（非硬件损坏）。**
+
+### swap内存置换空间
+
+早期内存不足时，可以暂时将内存的程序放到磁盘的swap空间。现在内存一般比较大，swap很少用到，因此在个人使用时，不设定swap也可以，但对服务器一般都设置，有备无患。
+
+### 分区，格式化和挂载
+
+gdisk建立新的分区，partprobe强制核心更新分区表，mkfs格式化，mkdir建立挂载点，mount挂载。
+
++ `fdisk -l`
++ `df -hT`
++ `parted /dev/sda` `print list`
+
+### 压缩打包
+
+<https://blog.51cto.com/chidongting/1744575>
+
+### [备份](http://os.51cto.com/art/201005/200285_all.htm)
+
+dd:系统复制，将iso写入U盘实例
+sudo fdisk -l查看Ｕ盘的路径: /dev/sdb1
+sudo dd if=/home/user/ubuntu-14.04.5-desktop-amd64.iso of=/dev/sdb1
+
+## bash
+
+~/.bash_history记录的是上一次登录以前执行过的命令，至于这一次登录执行的命令暂存在内存中，当成功注销后才写入.bash_history文件中。`history`
+
+`alias lm='ls -al'`别名
+
+`type`判断是否为bash内建指令
+
+`\[Enter]` 长命令换行，中间不能有空格
+
+[快捷键](https://github.com/hokein/Wiki/wiki/Bash-Shell%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE)
+
+变量：`env` `$PATH` `${PATH}`
+
+`echo $$` 本shell的PID
+
+set-unset alias-unalias
+
+`!66` 执行history中66号命令
+
+### 数据流重定向
+
+## shell script
