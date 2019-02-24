@@ -47,6 +47,7 @@ FHS:filesystem hierarchy standard，目录配置标准。
 `head -n 10 test.txt;`
 `file test` 查看文件类型
 `stat test.txt;` 查看文件状态
+[`tree`](https://blog.csdn.net/fangye945a/article/details/85256003)
 
 cp，rm,mv，basename,dirname,
 
@@ -150,5 +151,3 @@ set-unset alias-unalias
 `!66` 执行history中66号命令
 
 ### 数据流重定向
-
-## shell script

@@ -8,14 +8,18 @@
   MInGW-w64: https://sourceforge.net/projects/mingw-w64/files/mingw-w64/
 
 4.Laomaotao install Windows10 and UltraISO intall Linux 18.04.  
- - mind the leagacy and UEFI booting.    
- - mind the way of writing USB   
- - use EasyBCD to add a grub or grub leagacy.    
- - time synchronization of Linux and Windows double sysytem.
+
++ mind the leagacy and UEFI booting.
++ mind the way of writing USB
++ use EasyBCD to add a grub or grub leagacy.
++ time synchronization of Linux and Windows double sysytem.
+
 ```bash
 timedatectl set-local-rtc 1 --adjust-system-clock
 timedatectl
 timedatectl set-local-rtc 0 (reset)
 ```
 
+5.shadowsocks配置
 
+[linux配置shadowsocks](https://blog.huihut.com/2017/08/25/LinuxInstallConfigShadowsocksClient/)
