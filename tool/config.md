@@ -23,3 +23,7 @@ timedatectl set-local-rtc 0 (reset)
 5.shadowsocks配置
 
 [linux配置shadowsocks](https://blog.huihut.com/2017/08/25/LinuxInstallConfigShadowsocksClient/)
+
+6.git note
+"access token":f0f775b62995ea4cf24af8bc95a7cbdc0e51152b
+"sync.gist": "d39a045e96ffe584e89a2445701f0f1a",
