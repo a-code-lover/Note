@@ -3,6 +3,15 @@
 + [linux守护进程的启动方法](http://www.ruanyifeng.com/blog/2016/02/linux-daemon.html)
 + [linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 + [systemd入门](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
++ [进程管理](http://gityuan.com/tags/#linux)
++ [进程的内存空间](https://github.com/1184893257/simplelinux/blob/master/mem.md)
+
+## 问题
+
++ 进程和线程有什么区别？
++ 如何查看有哪些进程和线程？
++ 如何创建进程？如何创建线程？
++ [realid和effectiveid的区别？](https://stackoverflow.com/questions/32455684/difference-between-real-user-id-effective-user-id-and-saved-user-id)
 
 ## basic
 
@@ -103,6 +112,16 @@
 
 nice：给新执行的指令给予新的nice值； `nice -n -5 vim &` 将启动vim默认的NI值减少5
 renice：已存在的进程nice重新调整； `renice -5 14836`将PID为14836的进程NI值设置为-5
+
+### 创建进程
+
+[子进程和父进程的区别](http://www.cnblogs.com/hnrainll/archive/2011/05/11/2043472.html)
+[最简单的fork例程](https://www.cnblogs.com/hnrainll/archive/2011/05/11/2043501.html)
+
+### 线程
+
+`ps -T -p [pid]` 查看某个进程的所有线程，[-T]参数开启线程查看
+`top -H -p [pid]` 查看特定进程的线程状况，**H键**切换进程（Tasks）和线程（Treads）查看模式。
 
 ## 系统服务管理
 

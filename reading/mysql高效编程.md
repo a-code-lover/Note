@@ -97,6 +97,8 @@ ORDER BY Score desc
 
 8.`having`字句可以让我们筛选成组后的各种数据，where字句在聚合前先筛选记录，也就是说作用在group by和having字句前。而having子句在聚合后对组记录进行筛选。
 
+9.[select子查询](https://blog.csdn.net/JesseYoung/article/details/40108781)
+
 ## transaction
 
 + SHOW CREATE TABLE customer; --查看包括存储引擎
