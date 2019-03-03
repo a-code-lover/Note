@@ -1,4 +1,20 @@
-# deep insight of c++ stl
+---
+title: "STL源码解析"
+date: 2017-10-30T09:43:48+08:00
+lastmod: 2017-10-31T15:43:48+08:00
+draft: false
+tags: [reading]
+categories: [c++]
+author: "Archillieus"
+autoCollapseToc: true
+
+#menu:
+#  main:
+#    parent: "docs"
+#    weight: 1
+#    #name: "hi"
+#    #url: "https://gohugo.io"
+---
 
 Reference:
 
@@ -8,10 +24,10 @@ Reference:
 
 ## 1.源码：资源配置器Allocator
 
-（1）设计：<font color=red>向system heap申请空间，考虑多线程，考虑内存不足的措施，考虑过多小型区块造成内存破碎问题。</font>
-（2）std规格的allocators定义在defallocator.h，只是对::operator new和::operator delete的简单包装，并未考虑分配效率，分配失败等情况。在sgi_stl中使用stl_alloc.h,实现二级分配策略。
-（3）当申请大于128B时，执行一级分配，直接使用c的malloc和free。有历史原因，而且c++没有remalloc操作。
-（4）当申请小于128时，利用内存池进行分配回收，实行8字节对齐,维护16个linklist。<font color=red>**利用union实现链表节点结构，可以避免额外的管理空间。**</font>当内存不足时，执行一级策略向系统申请，由于一级使用c语言，所以用c语言模拟c++的new handle机制。stl标准的配置器定义在memory中。
+（1）设计：<font color=red>向system heap申请空间，考虑多线程，考虑内存不足的措施，考虑过多小型区块造成内存破碎问题。</font>  
+（2）std规格的allocators定义在defallocator.h，只是对::operator new和::operator delete的简单包装，并未考虑分配效率，分配失败等情况。在sgi_stl中使用stl_alloc.h,实现二级分配策略。  
+（3）当申请大于128B时，执行一级分配，直接使用c的malloc和free。有历史原因，而且c++没有remalloc操作。  
+（4）当申请小于128时，利用内存池进行分配回收，实行8字节对齐,维护16个linklist。<font color=red>**利用union实现链表节点结构，可以避免额外的管理空间。**</font>当内存不足时，执行一级策略向系统申请，由于一级使用c语言，所以用c语言模拟c++的new handle机制。stl标准的配置器定义在memory中。  
 
 ## 2.源码：迭代器Iterator
 
@@ -147,11 +163,13 @@ struct iterator {
 
 ## 6.源码：函数对象Function Class
 
-    仿函数的作用主要在哪？STL所提供的各种算法，往往有两个版本，其中一个版本是最常用的某种运算，第二个版本表现为泛化的过程，允许用户“以template参数来指定所要采用的策略“。如果要将”操作“作为算法的参数，唯一的方法是将该”操作“设计为一个函数，再将函数的指针当作算法的一个参数;或者就该”操作“设计为一个所谓的函数对象，并将该对象作为算法的一个参数。
-    那么为什么不使用函数指针呢？原因在于函数指针不能满足STL对于抽象性的要求，也不能满足软件的要求（函数指针无法和STL其他组件搭配，产生更灵活的变化）。
-    函数对象必须自定义function call运算符(operator()),拥有这样的运算符后，我们就可以在仿函数的对象后面加上一对小括号，以此调用函数对象定义的operator()。
-    若以操作数的个数分，可分为一元和二元，若以功能分，可分为Arithmetic, Rational, Logical。头文件<functional>。
-    一般而言，不会有人单独运用这些功能机器简单的函数对象，主要用途是搭配STL算法。
+> 仿函数的作用主要在哪？STL所提供的各种算法，往往有两个版本，其中一个版本是最常用的某种运算，第二个版本表现为泛化的过程，允许用户“以template参数来指定所要采用的策略“。如果要将”操作“作为算法的参数，唯一的方法是将该”操作“设计为一个函数，再将函数的指针当作算法的一个参数;或者就该”操作“设计为一个所谓的函数对象，并将该对象作为算法的一个参数。  
+>
+> 那么为什么不使用函数指针呢？原因在于函数指针不能满足STL对于抽象性的要求，也不能满足软件的要求（函数指针无法和STL其他组件搭配，产生更灵活的变化）。
+>
+> 函数对象必须自定义function call运算符(operator()),拥有这样的运算符后，我们就可以在仿函数的对象后面加上一对小括号，以此调用函数对象定义的operator()。若以操作数的个数分，可分为一元和二元，若以功能分，可分为Arithmetic, Rational, Logical。头文件\<functional\>。
+>
+> 一般而言，不会有人单独运用这些功能机器简单的函数对象，主要用途是搭配STL算法。
 
 ### unary_function
 
@@ -207,11 +225,13 @@ struct unary_function {
 
 ### function adapters(超灵活，数量最庞大)
 
-    function adapters的价值在于，通过他们之间的绑定，组合，修饰能力，几乎可以无限制地创造出各种表达式，搭配STL算法一起使用。
-    function adapters提供了一系列辅助函数。STL提供了众多的配接器，使”一般函数“和”成员函数“得以无缝地与其他配接器和算法结合起来。
-    所有期望获得配接能力的组件，本身必须是可配接的。换句话说，一元仿函数必须继承自unary_function, 二元仿函数必须继承自binary_function, 成员函数必须经过mem_fun处理过，一般函数必须经过ptr_fun处理过。
+> function adapters的价值在于，通过他们之间的绑定，组合，修饰能力，几乎可以无限制地创造出各种表达式，搭配STL算法一起使用。
+>
+> function adapters提供了一系列辅助函数。STL提供了众多的配接器，使”一般函数“和”成员函数“得以无缝地与其他配接器和算法结合起来。
+>
+> 所有期望获得配接能力的组件，本身必须是可配接的。换句话说，一元仿函数必须继承自unary_function, 二元仿函数必须继承自binary_function, 成员函数必须经过mem_fun处理过，一般函数必须经过ptr_fun处理过。
 
-+ bind1st(const Op& op, const T& x), bind2nd();
-+ not1(const Pred& pred), not2();
-+ ptr_fun(Result(*fp)(Arg)), ptr_fun(Result(*fp)(Arg1, Arg2));
++ `bind1st(const Op& op, const T& x), bind2nd();`
++ `not1(const Pred& pred), not2();`
++ `ptr_fun(Result(*fp)(Arg))`, `ptr_fun(Result(*fp)(Arg1, Arg2));`
 + mem_fun(S (T::*f)()), mem_fun(S (T::*f)() const), mem_fun_ref(S (T::*f)()), mem_fun_ref(S (T::*f)() const) 二元的重载了。

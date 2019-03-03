@@ -1,9 +1,27 @@
-# questions of c++
+---
+title: "C++常见问题"
+date: 2017-10-07T09:43:48+08:00
+lastmod: 2019-03-01T15:43:48+08:00
+draft: false
+tags: []
+categories: [c++]
+author: "Archillieus"
+autoCollapseToc: true
 
-## 1.basic
+#menu:
+#  main:
+#    parent: "docs"
+#    weight: 1
+#    #name: "hi"
+#    #url: "https://gohugo.io"
+---
+
+## Basic
 
 + [进程的地址空间？](https://harttle.land/2015/07/22/memory-segment.html)
+
 > 进程持有堆空间，线程持有栈空间。栈空间规模一般为几M，如1M，4M。堆的规模，理论上内存有多大，堆就可以建多大。堆大小在编译是就固定， 堆大小在运行是动态变化。
+
 + [哪些变量会默认初始化，哪些会随机初始化？](https://harttle.land/2015/10/05/cpp-variable-init.html)
 + [构造函数和析构函数没有返回值，以及抛出异常的问题？](https://www.cnblogs.com/luxiaoxun/archive/2012/09/06/2673249.html)
 + [什么情况下stl的迭代器和引用会非法化？](https://blog.csdn.net/y1196645376/article/details/52938474)
@@ -11,9 +29,11 @@
 + int * a = new int(10); a在栈， 10在堆。
 + [全局对象，静态对象，局部对象，const， static， static const](https://blog.csdn.net/jinpeng_cumt/article/details/52723131)
 + [静态函数只能访问静态变量。static变量在类外初始化，避免重复定义。常量对象只能访问构造函数，析构函数和常量函数，所有属性赋值都会编译报错。](https://harttle.land/2015/06/24/cpp-static-and-const-member.html)
+
 > const修饰的量确切说叫只读量，不是常量。
 > 可能在栈区，可能在全局区，看作用域以及有没有static修饰了，如果没有对其取地址的话，也可能被编译器优化为字
 > 面常量。
+
 + [static_cast, dynamic_cast, const_cast](https://www.cnblogs.com/chenyangchun/p/6795923.html)
 + 类中的方法只声明，不定义，如果没被调用会报错吗？虚函数除外。
 + [引用占用内存？](https://stackoverflow.com/questions/1179937/how-does-a-c-reference-look-memory-wise)
@@ -24,7 +44,9 @@
 + [指针占几个字节？](https://zhidao.baidu.com/question/505146033.html)
 + [标准库的sizeof(string)占几个字节？64bit和32bit还不一样？](https://zhidao.baidu.com/question/165120550.html)
 + [类的存储字节如何对齐？](https://harttle.land/2015/07/24/effective-cpp-7.html)
+
 > 对齐方式：最大基本数据类型，函数在代码段，所以与sizeof()无关。使用``#pragma pack()``自定义对齐
+
 + [Item 8 : 为什么不要再析构函数中抛出异常？](https://harttle.land/2015/07/26/effective-cpp-8.html)
 + [c++的异常处理好像有争议哦？](https://www.zhihu.com/question/22889420)
 + [Item 9 : 在构造/析构时不要调用虚函数](https://harttle.land/tags.html#Effective-C++)
@@ -43,7 +65,9 @@
 + [Item 19 : 把类的设计当作类型的设计](https://harttle.land/2015/08/12/effective-cpp-19.html)
 + [Item 20 : 传递常量引用比传值更好？](https://harttle.land/2015/08/13/effective-cpp-20.html)
 + [Item 21 : 不要返回对象的引用](https://harttle.land/2015/08/18/effective-cpp-21.html)
+
 > int *x = new int(100); 在函数退出时，x会被撤销，但是栈空间并没有释放，对该地址的解引用仍然有效，所以函数返回x（地址拷贝），这是合法合理的。
+
 + [Item 22 : 数据成员应该声明为私有](https://harttle.land/2015/08/19/effective-cpp-22.html)
 + [Item 23 : 非成员非友元函数优于成员函数](https://harttle.land/2015/08/20/effective-cpp-23.html)
 + [Item 24 : 用非成员函数来支持所有元的类型转换](https:/harttle.land/2015/08/22/effective-cpp-24.html)

@@ -1,8 +1,35 @@
-# mysql高效编程
+---
+title: "《mysql高效编程》选读"
+date: 2019-02-17T15:43:48+08:00
+lastmod: 2019-02-21T15:43:48+08:00
+draft: false
+tags: ["mysql","reading"]
+categories: ["数据库"]
+author: "Archillieus"
 
-## api
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
+# toc: false
+autoCollapseToc: true
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
+#contentCopyright: '<a href="https://github.com/gohugoio/hugoBasicExample" rel="noopener" target="_blank">See origin</a>'
+# reward: false
+# mathjax: false
+
+#menu:
+#  main:
+#    parent: "docs"
+#    weight: 1
+#    #name: "hi"
+#    #url: "https://gohugo.io"
+---
+
+## 1.SQL语句
 
 子查询，多表查询，排序
+
+### 基础语句
 
 + myql -u root -p --按提示输入密码
 + SHOW databases;
@@ -56,7 +83,7 @@
 + CREATE TABLE customerH **LIKE** customer; --复制列结构，包括PRIMARY KEY和AUTO_INCREMENT
 + INSERT INTO customerH SELECT * FROM customer; --复制数据
 
-### sql语句拓展
+### SQL语句拓展
 
 1.`SELECT u.name,o.oid FROM order AS o INNER JOIN user AS u **ON** o.uid=u.uid;`  SQL语句中`AS`可以忽略，使用别名后就必须使用别名，如写`user.name`则报错找不到user。
 
@@ -99,7 +126,7 @@ ORDER BY Score desc
 
 9.[select子查询](https://blog.csdn.net/JesseYoung/article/details/40108781)
 
-## transaction
+## 2.transaction
 
 + SHOW CREATE TABLE customer; --查看包括存储引擎
 + SHOW CREATE TABLE customer \G --用\G替换分号是监视器的小技巧，方便查看
@@ -125,10 +152,10 @@ ORDER BY Score desc
 
 ### 事务更新数据
 
-UNDO日志：回滚段，在修改数据之前保存变更前的数据，表内容有指向undo日志的指针。
-REDO日志：事务处理日志，commit后出错，利用redo日志恢复。客户端更新数据先更新内存，同时将事务写到REDO日志（实时），到达某一检查点是更新硬盘数据。如果写硬盘出错（如断电导致内存丢失），则排除故障并可根据REDO日志还原到故障点前。
+(1)UNDO日志：回滚段，在修改数据之前保存变更前的数据，表内容有指向undo日志的指针。  
+(2)REDO日志：事务处理日志，commit后出错，利用redo日志恢复。客户端更新数据先更新内存，同时将事务写到REDO日志（实时），到达某一检查点是更新硬盘数据。如果写硬盘出错（如断电导致内存丢失），则排除故障并可根据REDO日志还原到故障点前。
 
-## 索引与视图
+## 3.索引与视图
 
 + CREATE INDEX idxlp ON employee(lname_pinyin); --对表employee的lname_pinyin列建立索引名为idxlp
 + SHOW INDEX FROM employee\G
@@ -143,8 +170,8 @@ REDO日志：事务处理日志，commit后出错，利用redo日志恢复。客
 + SHOW FIELDS FROM v_order;
 + SELECT * FROM v_order WHERE oid='';
 
-丛生索引？
-唯一索引：含有重复数据则报错
+丛生索引？  
+唯一索引：含有重复数据则报错  
 创建索引的目的是提高搜索效率，如果遍历的次数与创建索引前变化不大，说明创建索引不合理。
 
 ### 索引失效
@@ -182,9 +209,9 @@ REDO日志：事务处理日志，commit后出错，利用redo日志恢复。客
 + 视图使用子查询；
 + 跨表修改；
 
-![视图](./img/view_sql.png)
+![视图](/img/reading/view_sql.png)
 
-## 存储过程
+## 4.存储过程
 
 使用各种条件判断，循环控制等将一些sql命令组织起来形成程序，实现简单的sql语句不能实现的功能。可以提高性能，减轻网络负担，防止对表的直接访问，将数据库的处理黑盒化。
 
@@ -197,7 +224,7 @@ END
 //
 ```
 
-## 函数与触发器
+## 5.函数与触发器
 
 ```sql
 CREATE FUNCTION 函数名(参数，数据类型)
@@ -216,7 +243,7 @@ BEGIN
 END
 ```
 
-![触发器例子](./img/trigger_sql.png)
+![触发器例子](/img/reading/trigger_sql.png)
 
 + SHOW PROCEDURE STATUS\G
 + SHOW FUNCTION STATUS\G

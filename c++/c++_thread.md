@@ -1,6 +1,22 @@
-# multithread programming with c++
+---
+title: "C++进程"
+date: 2017-10-10T09:43:48+08:00
+lastmod: 2019-03-01T15:43:48+08:00
+draft: false
+tags: [进程]
+categories: [c++]
+author: "Archillieus"
+autoCollapseToc: true
 
-reference:
+#menu:
+#  main:
+#    parent: "docs"
+#    weight: 1
+#    #name: "hi"
+#    #url: "https://gohugo.io"
+---
+
+Reference:
 
 + <https://www.kancloud.cn/jxm_zn/cpp_concurrency_in_action/264949>
 
@@ -125,7 +141,7 @@ friend void swap(X& lhs, X& rhs)
   }
 ```
 
-## 3.winsock
+## 4.winsock
 
 ### (1)socket error
 
