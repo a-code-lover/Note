@@ -33,6 +33,8 @@
 6.getline(cin, str); getline(istringstream, str);
 7.正则表达式匹配：`regex_search`, `regex_match`
 
+### list
+
 ## 工具库
 
 ### [hash支持](https://zh.cppreference.com/w/cpp/utility/hash)
@@ -42,6 +44,8 @@
 ## algorithm
 
 ### 堆操作
+
+> algorithm只修改内容，不增加或删除空间
 
 `std::make_heap()`, `std::push_heap()`, `std::pop_heap()`, `sort_heap()`, `is_heap()`
 
@@ -69,3 +73,4 @@
 ```
 
 ## 正则表达式库
+

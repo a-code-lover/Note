@@ -218,14 +218,12 @@ void permutationUnique(vector<vector<int>> &res, vector<int> &arr, size_t i) {
 }
 
 int main() {
-    vector<int> nums = {1,1,2};
+    vector<int> nums = kmpProcess("ababaaaba");
 
-    int i = 5;
-    while (next_permutation(nums) && i--) {
-        for (auto elem : nums)
-            cout << elem << ends;
-        cout << endl;
+    for (auto item : nums) {
+        cout << item << ends;
     }
+    cout << endl;
     cin.get();
     cin.get();
     return 0;
