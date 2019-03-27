@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "《C++ primer》选读"
 date: 2017-10-02T09:43:48+08:00
 lastmod: 2019-03-01T15:43:48+08:00
@@ -14,7 +14,7 @@ autoCollapseToc: true
 #    weight: 1
 #    #name: "hi"
 #    #url: "https://gohugo.io"
----
+--- -->
 
 ## 第二章：变量与类型
 

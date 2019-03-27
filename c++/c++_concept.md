@@ -161,7 +161,7 @@ baz = MyClass();         // move assignment
 
 >Unless otherwise specified, the constructors of a derived class calls the default constructor of its base classes (i.e., the constructor taking no arguments). Calling a different constructor of a base class is possible, using the same syntax used to initialize member variables in the initialization list.
 
-|             | public    | protected | private |
+| ----------- | public    | protected | private |
 | ----------- | :-------: | :-------: | ------- |
 | public inh  | public    | protected | no |
 | protect inh | protected | protected | no |
